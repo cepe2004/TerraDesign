@@ -35,8 +35,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.тестиированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.боковыеРезервыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.водоотводныеСооруженияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.итоговыеОбъёмыЗемляныхРаботToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,22 +100,16 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
+            this.тестиированиеToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(875, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -120,6 +118,44 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(59, 24);
             this.toolStripMenuItem1.Text = "Вход";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // тестиированиеToolStripMenuItem
+            // 
+            this.тестиированиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.боковыеРезервыToolStripMenuItem,
+            this.водоотводныеСооруженияToolStripMenuItem,
+            this.итоговыеОбъёмыЗемляныхРаботToolStripMenuItem});
+            this.тестиированиеToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.тестиированиеToolStripMenuItem.Name = "тестиированиеToolStripMenuItem";
+            this.тестиированиеToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.тестиированиеToolStripMenuItem.Text = "Тестирование";
+            // 
+            // боковыеРезервыToolStripMenuItem
+            // 
+            this.боковыеРезервыToolStripMenuItem.Name = "боковыеРезервыToolStripMenuItem";
+            this.боковыеРезервыToolStripMenuItem.Size = new System.Drawing.Size(343, 24);
+            this.боковыеРезервыToolStripMenuItem.Text = "Боковые резервы";
+            this.боковыеРезервыToolStripMenuItem.Click += new System.EventHandler(this.боковыеРезервыToolStripMenuItem_Click);
+            // 
+            // водоотводныеСооруженияToolStripMenuItem
+            // 
+            this.водоотводныеСооруженияToolStripMenuItem.Name = "водоотводныеСооруженияToolStripMenuItem";
+            this.водоотводныеСооруженияToolStripMenuItem.Size = new System.Drawing.Size(343, 24);
+            this.водоотводныеСооруженияToolStripMenuItem.Text = "Водоотводные сооружения";
+            // 
+            // итоговыеОбъёмыЗемляныхРаботToolStripMenuItem
+            // 
+            this.итоговыеОбъёмыЗемляныхРаботToolStripMenuItem.Name = "итоговыеОбъёмыЗемляныхРаботToolStripMenuItem";
+            this.итоговыеОбъёмыЗемляныхРаботToolStripMenuItem.Size = new System.Drawing.Size(343, 24);
+            this.итоговыеОбъёмыЗемляныхРаботToolStripMenuItem.Text = "Итоговые объёмы земляных работ";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // Tema
             // 
@@ -159,5 +195,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem тестиированиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem боковыеРезервыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem водоотводныеСооруженияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem итоговыеОбъёмыЗемляныхРаботToolStripMenuItem;
     }
 }

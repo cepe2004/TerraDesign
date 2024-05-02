@@ -46,7 +46,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
         double[] WorkMark, Plot;
         bool[] Mound;
 
-       
+       // Нахождение объёма земли
         private void VolumeEarth()
         {
             i = 0;
@@ -66,7 +66,10 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             }
 
         }
-        private void WorkMarkCorrection()
+
+        // Исправление рабочих меток
+
+        private void CorrectionWorkMark()
         {
         
             i = 0;
@@ -84,7 +87,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                 }
             }
         }
-        private void RoadwayCorrecion()
+        private void CorrecionRoadway()
         {
             i = 0;
             GlobalVars.N2 = new double[Plot.Length];
@@ -316,8 +319,8 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                     
                     i = 0;
                     VolumeEarth();
-                    WorkMarkCorrection();
-                    RoadwayCorrecion();
+                    CorrectionWorkMark();
+                    CorrecionRoadway();
                     VegetableSoilCorrecion();
                     CuvetteDepthCorrection();
 

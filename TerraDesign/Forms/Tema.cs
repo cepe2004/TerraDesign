@@ -62,5 +62,12 @@ namespace TerraDesign.Forms
         {
 
         }
+
+        private void боковыеРезервыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Testing testing = new Testing("LS");
+            testing.Show();
+            this.Hide();
+        }
     }
 }
