@@ -29,42 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WFcheck));
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbm = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbI = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbQ = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btCount = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label25 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbn = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbTrape = new System.Windows.Forms.RadioButton();
+            this.rbTriangle = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbB = new System.Windows.Forms.ComboBox();
+            this.cbH = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox4
+            // tbm
             // 
-            this.textBox4.Location = new System.Drawing.Point(622, 228);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 29);
-            this.textBox4.TabIndex = 23;
+            this.tbm.Location = new System.Drawing.Point(622, 228);
+            this.tbm.Name = "tbm";
+            this.tbm.Size = new System.Drawing.Size(151, 29);
+            this.tbm.TabIndex = 23;
             // 
             // label7
             // 
@@ -84,13 +83,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Коэффициент заложения откосов русла";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(622, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 29);
-            this.textBox3.TabIndex = 20;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -109,12 +101,12 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Коэффициент шероховатости русла";
             // 
-            // textBox2
+            // tbI
             // 
-            this.textBox2.Location = new System.Drawing.Point(622, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 29);
-            this.textBox2.TabIndex = 17;
+            this.tbI.Location = new System.Drawing.Point(622, 104);
+            this.tbI.Name = "tbI";
+            this.tbI.Size = new System.Drawing.Size(151, 29);
+            this.tbI.TabIndex = 17;
             // 
             // label3
             // 
@@ -134,12 +126,12 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Уклон для русла";
             // 
-            // textBox1
+            // tbQ
             // 
-            this.textBox1.Location = new System.Drawing.Point(622, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 29);
-            this.textBox1.TabIndex = 14;
+            this.tbQ.Location = new System.Drawing.Point(622, 42);
+            this.tbQ.Name = "tbQ";
+            this.tbQ.Size = new System.Drawing.Size(151, 29);
+            this.tbQ.TabIndex = 14;
             // 
             // label2
             // 
@@ -159,17 +151,17 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Расход воды, куб.м/с";
             // 
-            // button2
+            // btCount
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(270, 517);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(286, 67);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "Посчитать";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btCount.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btCount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btCount.Location = new System.Drawing.Point(270, 517);
+            this.btCount.Name = "btCount";
+            this.btCount.Size = new System.Drawing.Size(286, 67);
+            this.btCount.TabIndex = 42;
+            this.btCount.Text = "Посчитать";
+            this.btCount.UseVisualStyleBackColor = false;
+            this.btCount.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuStrip1
             // 
@@ -201,20 +193,23 @@
             this.label25.TabIndex = 98;
             this.label25.Text = "Используйте запятую [,] как разделитель целой и дробной части";
             // 
-            // comboBox1
+            // cbn
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "0,12"});
-            this.comboBox1.Location = new System.Drawing.Point(581, 169);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 99;
+            this.cbn.FormattingEnabled = true;
+            this.cbn.Items.AddRange(new object[] {
+            "0,017",
+            "0,020",
+            "0,025",
+            "0,030"});
+            this.cbn.Location = new System.Drawing.Point(622, 169);
+            this.cbn.Name = "cbn";
+            this.cbn.Size = new System.Drawing.Size(151, 32);
+            this.cbn.TabIndex = 99;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.rbTrape);
+            this.groupBox1.Controls.Add(this.rbTriangle);
             this.groupBox1.Location = new System.Drawing.Point(68, 411);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(607, 100);
@@ -222,27 +217,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Геометрическая форма поперечного сечения канавы";
             // 
-            // radioButton1
+            // rbTrape
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(216, 44);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(190, 28);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Трапецеидальная";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbTrape.AutoSize = true;
+            this.rbTrape.Location = new System.Drawing.Point(216, 44);
+            this.rbTrape.Name = "rbTrape";
+            this.rbTrape.Size = new System.Drawing.Size(190, 28);
+            this.rbTrape.TabIndex = 16;
+            this.rbTrape.TabStop = true;
+            this.rbTrape.Text = "Трапецеидальная";
+            this.rbTrape.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbTriangle
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(444, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(143, 28);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Треугольная";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbTriangle.AutoSize = true;
+            this.rbTriangle.Location = new System.Drawing.Point(444, 44);
+            this.rbTriangle.Name = "rbTriangle";
+            this.rbTriangle.Size = new System.Drawing.Size(143, 28);
+            this.rbTriangle.TabIndex = 17;
+            this.rbTriangle.TabStop = true;
+            this.rbTriangle.Text = "Треугольная";
+            this.rbTriangle.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -262,34 +257,34 @@
             this.label10.TabIndex = 101;
             this.label10.Text = "Ширина канавы по дну";
             // 
-            // comboBox2
+            // cbB
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbB.FormattingEnabled = true;
+            this.cbB.Items.AddRange(new object[] {
             "0,4",
             "0,5",
             "0,6",
             "0,7",
             "0.8"});
-            this.comboBox2.Location = new System.Drawing.Point(622, 282);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
-            this.comboBox2.TabIndex = 104;
+            this.cbB.Location = new System.Drawing.Point(622, 282);
+            this.cbB.Name = "cbB";
+            this.cbB.Size = new System.Drawing.Size(121, 32);
+            this.cbB.TabIndex = 104;
             // 
-            // comboBox3
+            // cbH
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbH.FormattingEnabled = true;
+            this.cbH.Items.AddRange(new object[] {
             "0,3",
             "0,4",
             "0,5",
             "0,6",
             "0,7",
             "0,8"});
-            this.comboBox3.Location = new System.Drawing.Point(622, 331);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 32);
-            this.comboBox3.TabIndex = 107;
+            this.cbH.Location = new System.Drawing.Point(622, 331);
+            this.cbH.Name = "cbH";
+            this.cbH.Size = new System.Drawing.Size(121, 32);
+            this.cbH.TabIndex = 107;
             // 
             // label11
             // 
@@ -315,27 +310,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(853, 618);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbH);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbB);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbn);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.btCount);
+            this.Controls.Add(this.tbm);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbI);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbQ);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -357,30 +351,29 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbm;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbI;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbQ;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btCount;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbTrape;
+        private System.Windows.Forms.RadioButton rbTriangle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbB;
+        private System.Windows.Forms.ComboBox cbH;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
     }
