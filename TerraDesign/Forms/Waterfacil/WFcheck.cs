@@ -24,6 +24,8 @@ namespace TerraDesign.Forms.Waterfacil
         private void ConsumSingleRough()
         {
             GlobalVars.Ksch = (GlobalVars.Q * GlobalVars.n)/ (Math.Sqrt(GlobalVars.i));
+            //GlobalVars.Ksch= GlobalVars.Ksch-0.01;
+            GlobalVars.Ksch = Math.Round(GlobalVars.Ksch, 1); 
 
         }
 
