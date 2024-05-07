@@ -22,6 +22,7 @@ namespace TerraDesign
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Tema());
+           
         }
     
 

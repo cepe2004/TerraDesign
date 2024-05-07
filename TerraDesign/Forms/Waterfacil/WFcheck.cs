@@ -21,6 +21,7 @@ namespace TerraDesign.Forms.Waterfacil
             InitializeComponent();
         }
         double Q, i, n, m, B, H, w, X, R, W, v;
+
         
         private void clearArea()
         {
@@ -53,141 +54,142 @@ namespace TerraDesign.Forms.Waterfacil
                 switch (r)
                 {
                     case 0.10: return 12.0; 
-                    case 0.12: return 13.6; break;
-                    case 0.14: return 15.1; break;
-                    case 0.16: return 16.6; break;
-                    case 0.18: return 17.9; break;
-                    case 0.20: return 20.6; break;
-                    case 0.22: return 21.8; break;
-                    case 0.24: return 22.0; break;
-                    case 0.26: return 23.2; break;
-                    case 0.28: return 24.0; break;
-                    case 0.30: return 25.2; break;
-                    case 0.32: return 26.0; break;
-                    case 0.34: W = 27.9; break;
-                    case 0.36: W = 29.0; break;
-                    case 0.38: W = 30.1; break;
-                    case 0.40: W = 31.2; break;
-                    case 0.45: W = 33.8; break;
-                    case 0.50: W = 36.4; break;
-                    case 0.55: W = 39.0; break;
-                    case 0.60: W = 41.4; break;
-                    case 0.65: W = 43.6; break;
-                    case 0.70: W = 45.8; break;
-                    case 0.75: W = 48.1; break;
-                    case 0.80: W = 50.4; break;
-                    case 0.85: W = 52.6; break;
-                    case 0.90: W = 54.8; break;
-                    case 0.95: W = 56.8; break;
-                    case 1.00: W = 58.8; break;
-                    default: break;
+                    case 0.12: return 13.6; 
+                    case 0.14: return 15.1;
+                    case 0.16: return 16.6;
+                    case 0.18: return 17.9;
+                    case 0.20: return 20.6;
+                    case 0.22: return 21.8;
+                    case 0.24: return 22.0;
+                    case 0.26: return 23.2;
+                    case 0.28: return 24.0;
+                    case 0.30: return 25.2;
+                    case 0.32: return 26.0;
+                    case 0.34: return 27.9;
+                    case 0.36: return 29.0;
+                    case 0.38: return 30.1;
+                    case 0.40: return 31.2;
+                    case 0.45: return 33.8;
+                    case 0.50: return 36.4;
+                    case 0.55: return 39.0;
+                    case 0.60: return 41.4;
+                    case 0.65: return 43.6;
+                    case 0.70: return 45.8;
+                    case 0.75: return 48.1;
+                    case 0.80: return 50.4;
+                    case 0.85: return 52.6;
+                    case 0.90: return 54.8;
+                    case 0.95: return 56.8;
+                    case 1.00: return 58.8;
+                    default: return 0 ;
                 }
             }
             if (n == 0.020)
             {
                 switch (r)
                 {
-                    case 0.10: W = 9.75; break;
-                    case 0.12: W = 11.1; break;
-                    case 0.14: W = 12.4; break;
-                    case 0.16: W = 13.6; break;
-                    case 0.18: W = 14.8; break;
-                    case 0.20: W = 16.0; break;
-                    case 0.22: W = 17.1; break;
-                    case 0.24: W = 18.1; break;
-                    case 0.26: W = 19.2; break;
-                    case 0.28: W = 20.3; break;
-                    case 0.30: W = 21.4; break;
-                    case 0.32: W = 22.2; break;
-                    case 0.34: W = 23.2; break;
-                    case 0.36: W = 24.2; break;
-                    case 0.38: W = 25.2; break;
-                    case 0.40: W = 26.2; break;
-                    case 0.45: W = 28.4; break;
-                    case 0.50: W = 30.6; break;
-                    case 0.55: W = 32.6; break;
-                    case 0.60: W = 34.8; break;
-                    case 0.65: W = 36.8; break;
-                    case 0.70: W = 38.7; break;
-                    case 0.75: W = 40.6; break;
-                    case 0.80: W = 42.7; break;
-                    case 0.85: W = 44.5; break;
-                    case 0.90: W = 46.5; break;
-                    case 0.95: W = 48.1; break;
-                    case 1.00: W = 50.0; break;
-                    default: break;
+                    case 0.10: return 9.75;
+                    case 0.12: return 11.1;
+                    case 0.14: return 12.4;
+                    case 0.16: return 13.6;
+                    case 0.18: return 14.8;
+                    case 0.20: return 16.0;
+                    case 0.22: return 17.1;
+                    case 0.24: return 18.1;
+                    case 0.26: return 19.2;
+                    case 0.28: return 20.3;
+                    case 0.30: return 21.4;
+                    case 0.32: return 22.2;
+                    case 0.34: return 23.2;
+                    case 0.36: return 24.2;
+                    case 0.38: return 25.2;
+                    case 0.40: return 26.2;
+                    case 0.45: return 28.4;
+                    case 0.50: return 30.6;
+                    case 0.55: return 32.6;
+                    case 0.60: return 34.8;
+                    case 0.65: return 36.8;
+                    case 0.70: return 38.7;
+                    case 0.75: return 40.6;
+                    case 0.80: return 42.7;
+                    case 0.85: return 44.5;
+                    case 0.90: return 46.5;
+                    case 0.95: return 48.1;
+                    case 1.00: return 50.0;
+                    default:return 0 ;
                 }
             }
             if (n == 0.025)
             {
                 switch (r)
                 {
-                    case 0.10: W = 7.10; break;
-                    case 0.12: W = 8.14; break;
-                    case 0.14: W = 9.15; break;
-                    case 0.16: W = 10.1; break;
-                    case 0.18: W = 11.0; break;
-                    case 0.20: W = 12.0; break;
-                    case 0.22: W = 12.9; break;
-                    case 0.24: W = 13.7; break;
-                    case 0.26: W = 14.5; break;
-                    case 0.28: W = 15.4; break;
-                    case 0.30: W = 16.2; break;
-                    case 0.32: W = 17.0; break;
-                    case 0.34: W = 17.8; break;
-                    case 0.36: W = 18.6; break;
-                    case 0.38: W = 19.3; break;
-                    case 0.40: W = 20.2; break;
-                    case 0.45: W = 21.9; break;
-                    case 0.50: W = 23.8; break;
-                    case 0.55: W = 25.6; break;
-                    case 0.60: W = 27.3; break;
-                    case 0.65: W = 29.0; break;
-                    case 0.70: W = 30.6; break;
-                    case 0.75: W = 32.2; break;
-                    case 0.80: W = 33.9; break;
-                    case 0.85: W = 35.4; break;
-                    case 0.90: W = 37.0; break;
-                    case 0.95: W = 38.5; break;
-                    case 1.00: W = 40.0; break;
-                    default: break;
+                    case 0.10: return 7.10;
+                    case 0.12: return 8.14;
+                    case 0.14: return 9.15;
+                    case 0.16: return 10.1;
+                    case 0.18: return 11.0;
+                    case 0.20: return 12.0;
+                    case 0.22: return 12.9;
+                    case 0.24: return 13.7;
+                    case 0.26: return 14.5;
+                    case 0.28: return 15.4;
+                    case 0.30: return 16.2;
+                    case 0.32: return 17.0;
+                    case 0.34: return 17.8;
+                    case 0.36: return 18.6;
+                    case 0.38: return 19.3;
+                    case 0.40: return 20.2;
+                    case 0.45: return 21.9;
+                    case 0.50: return 23.8;
+                    case 0.55: return 25.6;
+                    case 0.60: return 27.3;
+                    case 0.65: return 29.0;
+                    case 0.70: return 30.6;
+                    case 0.75: return 32.2;
+                    case 0.80: return 33.9;
+                    case 0.85: return 35.4;
+                    case 0.90: return 37.0;
+                    case 0.95: return 38.5;
+                    case 1.00: return 40.0;
+                    default: return 0 ;
                 }
             }
             if (n == 0.030)
             {
                 switch (r)
                 {
-                    case 0.10: W = 5.54; break;
-                    case 0.12: W = 6.36; break;
-                    case 0.14: W = 7.19; break;
-                    case 0.16: W = 7.98; break;
-                    case 0.18: W = 8.76; break;
-                    case 0.20: W = 9.54; break;
-                    case 0.22: W = 10.2; break;
-                    case 0.24: W = 10.9; break;
-                    case 0.26: W = 11.7; break;
-                    case 0.28: W = 12.3; break;
-                    case 0.30: W = 13.1; break;
-                    case 0.32: W = 13.7; break;
-                    case 0.34: W = 14.4; break;
-                    case 0.36: W = 15.0; break;
-                    case 0.38: W = 15.7; break;
-                    case 0.40: W = 16.3; break;
-                    case 0.45: W = 17.9; break;
-                    case 0.50: W = 19.4; break;
-                    case 0.55: W = 20.8; break;
-                    case 0.60: W = 22.4; break;
-                    case 0.65: W = 23.8; break;
-                    case 0.70: W = 25.1; break;
-                    case 0.75: W = 26.6; break;
-                    case 0.80: W = 28.8; break;
-                    case 0.85: W = 29.4; break;
-                    case 0.90: W = 30.8; break;
-                    case 0.95: W = 32.1; break;
-                    case 1.00: W = 33.3; break;
-                    default: break;
+                    case 0.10: return 5.54;
+                    case 0.12: return 6.36;
+                    case 0.14: return 7.19;
+                    case 0.16: return 7.98;
+                    case 0.18: return 8.76;
+                    case 0.20: return 9.54;
+                    case 0.22: return 10.2;
+                    case 0.24: return 10.9;
+                    case 0.26: return 11.7;
+                    case 0.28: return 12.3;
+                    case 0.30: return 13.1;
+                    case 0.32: return 13.7;
+                    case 0.34: return 14.4;
+                    case 0.36: return 15.0;
+                    case 0.38: return 15.7;
+                    case 0.40: return 16.3;
+                    case 0.45: return 17.9;
+                    case 0.50: return 19.4;
+                    case 0.55: return 20.8;
+                    case 0.60: return 22.4;
+                    case 0.65: return 23.8;
+                    case 0.70: return 25.1;
+                    case 0.75: return 26.6;
+                    case 0.80: return 28.8;
+                    case 0.85: return 29.4;
+                    case 0.90: return 30.8; 
+                    case 0.95: return 32.1; 
+                    case 1.00: return 33.3; 
+                    default: return 0;
                 }
             }
+            return 0;
         }
 
             private void button2_Click(object sender, EventArgs e)
@@ -200,35 +202,99 @@ namespace TerraDesign.Forms.Waterfacil
             bool success4 = double.TryParse(cbB.Text, out B);
             bool success5 = double.TryParse(cbH.Text, out H);
 
-            if (success==false || success1 == false || success2 == false || success3 == false || success4 == false || success5 == false)
+            if (success==false || success1 == false || success2 == false || success3 == false|| success4 == false || success5 == false )
             {
                 MessageBox.Show("Введите числовые значения ", "Информация");
             }
             else
             {
+                start:
                 clearArea();
                 wettedPerimeter();
                 R = w / X;
                 R = Math.Round(R, 2);
-               speedCharacteristics();
-                if (R%2!=0&&R<40)
+               W=speedCharacteristics(R);
+              
+           
+                decimal Rm = new decimal(R);
+             
+
+                if (Rm % 0.02m != 0 && R<40)
                 {
-                    double R1, R2;
+                    double R1, R2,W1,W2;
                     R1 = R - 0.01;
+                    R1 = Math.Round(R1, 2);
                     R2 = R + 0.01;
-                    speedCharacteristics();
+                    R2 = Math.Round(R2, 2);
+                    W1 = speedCharacteristics(R1);
+                    W2 = speedCharacteristics(R2);
+                    W=((W2- W1)*(R-R1))/(R2-R1);
+                    W = Math.Round(W, 2);
+                    W = W + W1;
+                    W = Math.Round(W, 2);
+                }
+                if (R > 40&&Rm % 0.05m != 0)
+                {
+                    double R1, R2, W1, W2;
+                    R1 = R;
+                    R1 = Math.Round(R1, 2);
+                    R2 = R;
+                    R2 = Math.Round(R2, 2);
+                    decimal R1m = new decimal(R1);
+                    decimal R2m = new decimal(R2);
+                    while (R1m % 0.05m != 0 )
+                    {
+                        R1 = R1 - 0.01;
+                        R1 = Math.Round(R1, 2);
+                        R1m = new decimal(R1);
+                    }
+                    while (R2m % 0.05m != 0)
+                    {
+                        R2 = R2 + 0.01;
+                        R2 = Math.Round(R2, 2);
+                        R2m = new decimal(R2);
+                    }
+                    W1 = speedCharacteristics(R1);
+                    W2 = speedCharacteristics(R2);
+                    W = ((W2 - W1) * (R - R1)) / (R2 - R1);
+                    W = Math.Round(W, 2);
+                    W = W + W1;
+                    W = Math.Round(W, 2);
                 }
                 v=W*Math.Sqrt(i);
                 GlobalVars.Q = w * v;
-                Q = Q + (Q * 5 / 100);
-                if (GlobalVars.Q>Q)
+                double Q1,Q2;
+                Q1 = Q + (Q * 5 / 100);
+                Q2= Q - (Q * 5 / 100);
+                if (GlobalVars.Q > Q1)
                 {
-                    MessageBox.Show("Расчётное число меньше выбранного");
+                    if (B>0)
+                    {
+                        B = B - 0.1;
+                        goto start;
+                        
+                    }
+                    else
+                    {
+                        if (H>0)
+                        {
+                            H = H - 0.1;
+                            goto start;
+                        }   
+                       
+                    
+                    }
                 }
-                if (GlobalVars.Q < Q)
+                else if (GlobalVars.Q < Q2)
                 {
-                    MessageBox.Show("Расчётное число больше выбранного");
+
+                    B = B + 0.1;
+                    H = H + 0.1;
+                    goto start;
+
+
                 }
+
                 GlobalVars.bk = B;
                 GlobalVars.hk= H+0.2;
                 

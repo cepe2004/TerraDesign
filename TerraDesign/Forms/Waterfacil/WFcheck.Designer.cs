@@ -265,7 +265,7 @@
             "0,5",
             "0,6",
             "0,7",
-            "0.8"});
+            "0,8"});
             this.cbB.Location = new System.Drawing.Point(622, 282);
             this.cbB.Name = "cbB";
             this.cbB.Size = new System.Drawing.Size(121, 32);

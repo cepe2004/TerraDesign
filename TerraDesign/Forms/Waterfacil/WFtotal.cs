@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TerraDesign.Forms.Waterfacil
@@ -16,8 +17,8 @@ namespace TerraDesign.Forms.Waterfacil
         public WFtotal()
         {
             InitializeComponent();
-            GlobalVars.bk = Math.Round(GlobalVars.bk, 1);
-            GlobalVars.hk = Math.Round(GlobalVars.hk, 1);
+            GlobalVars.bk = Math.Round(GlobalVars.bk, 2);
+            GlobalVars.hk = Math.Round(GlobalVars.hk, 2);
             GlobalVars.bk = Math.Round(GlobalVars.bk, 2);
             GlobalVars.hk = Math.Round(GlobalVars.hk, 2);
            
