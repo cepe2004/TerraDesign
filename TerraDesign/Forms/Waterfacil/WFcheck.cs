@@ -268,17 +268,17 @@ namespace TerraDesign.Forms.Waterfacil
                 Q2= Q - (Q * 5 / 100);
                 if (GlobalVars.Q > Q1)
                 {
-                    if (B>0)
+                   if (B>0.4)
                     {
-                        B = B - 0.1;
+                        B = B - 0.01;
                         goto start;
                         
                     }
                     else
                     {
-                        if (H>0)
+                         if (H>0.3)
                         {
-                            H = H - 0.1;
+                            H = H - 0.01;
                             goto start;
                         }   
                        
@@ -287,9 +287,22 @@ namespace TerraDesign.Forms.Waterfacil
                 }
                 else if (GlobalVars.Q < Q2)
                 {
+                    if (H < 0.8)
+                    {
+                        H = H + 0.01;
+                        goto start;
 
-                    B = B + 0.1;
-                    H = H + 0.1;
+                    }
+                    else
+                    {
+                        if (B < 0.6)
+                        {
+                            B = B + 0.01;
+                            goto start;
+                        }
+
+
+                    }
                     goto start;
 
 

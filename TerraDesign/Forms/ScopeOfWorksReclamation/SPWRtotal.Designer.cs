@@ -35,8 +35,12 @@
             this.VRemovedVS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VRestoreR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -85,15 +89,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // menuStrip1
+            // menuStrip2
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1045, 24);
-            this.menuStrip1.TabIndex = 61;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip2.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wordToolStripMenuItem,
+            this.ExcelToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
+            this.menuStrip2.Size = new System.Drawing.Size(1045, 32);
+            this.menuStrip2.TabIndex = 97;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // wordToolStripMenuItem
+            // 
+            this.wordToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.wordToolStripMenuItem.Text = "Перенос в Word";
+            this.wordToolStripMenuItem.Click += new System.EventHandler(this.wordToolStripMenuItem_Click);
+            // 
+            // ExcelToolStripMenuItem
+            // 
+            this.ExcelToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ExcelToolStripMenuItem.Name = "ExcelToolStripMenuItem";
+            this.ExcelToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.ExcelToolStripMenuItem.Text = "Перенос в Excel";
+            this.ExcelToolStripMenuItem.Click += new System.EventHandler(this.ExcelToolStripMenuItem_Click);
             // 
             // SPWRtotal
             // 
@@ -101,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1045, 660);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -113,6 +136,8 @@
             this.Text = "Расчёт объёма работ по рекультивации земель";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SPWRtotal_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +147,13 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdRes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Square;
         private System.Windows.Forms.DataGridViewTextBoxColumn VRemovedVS;
         private System.Windows.Forms.DataGridViewTextBoxColumn VRestoreR;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem wordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExcelToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

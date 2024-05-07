@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.Office.Interop.Word;
+using Excel = Microsoft.Office.Interop.Excel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TerraDesign.Forms.Waterfacil
@@ -29,7 +30,7 @@ namespace TerraDesign.Forms.Waterfacil
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Form wFcheck in Application.OpenForms) wFcheck.Hide();
+            foreach (Form wFcheck in System.Windows.Forms.Application.OpenForms) wFcheck.Hide();
             Tema tema = new Tema();
             tema.Show();
            
@@ -39,6 +40,83 @@ namespace TerraDesign.Forms.Waterfacil
         private void WFtotal_FormClosed(object sender, FormClosedEventArgs e)
         {
         
+        }
+
+        private void wordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Создание объекта приложения Word
+                Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+                // Создание нового документа
+                Document doc = wordApp.Documents.Add();
+                // Добавление текста в документ
+                Paragraph para = doc.Paragraphs.Add();
+                Microsoft.Office.Interop.Word.Range rng = para.Range;
+                rng.Text = label1.Text+"   "+label2.Text+"  "+textBox1.Text+"\n"+
+                    label4.Text + "   " + label3.Text + "  " + textBox2.Text + "\n";
+
+                saveFileDialog1.Filter = "doc files (*.doc)|*.doc|All files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 1;
+                saveFileDialog1.RestoreDirectory = true;
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                  
+                    doc.SaveAs2(saveFileDialog1.FileName,saveFileDialog1.FilterIndex);
+                    
+                }
+                else
+                    return;
+                saveFileDialog1.Dispose();
+                MessageBox.Show("Файл успешно сохранён", "Информация");
+                doc.Close();
+                wordApp.Quit();
+            }
+            catch (System.Runtime.InteropServices.COMException)
+            {
+                MessageBox.Show("Закройте файл Word", "Информация");
+
+            }
+        }
+
+        private void ExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Excel.Application excelApp = new Excel.Application();
+                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
+                Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[1];
+
+                // Записываем данные в ячейки
+                excelWorksheet.Cells[1, 1] = label1.Text;
+                excelWorksheet.Cells[1, 2] = label2.Text;
+                excelWorksheet.Cells[1, 3]= textBox1.Text;
+                excelWorksheet.Cells[2, 1]= label4.Text;
+                excelWorksheet.Cells[2, 2]= label3.Text;
+                excelWorksheet.Cells[2, 3] =textBox2.Text;
+                excelWorksheet.Columns.AutoFit();
+
+                saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 1;
+                saveFileDialog1.RestoreDirectory = true;
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    excelWorkbook.SaveAs(saveFileDialog1.FileName, saveFileDialog1.FilterIndex);
+
+                }
+                else
+                    return;
+                saveFileDialog1.Dispose();
+                MessageBox.Show("Файл успешно сохранён", "Информация");
+                excelWorkbook.Close();
+                excelApp.Quit();
+            }
+            catch (System.Runtime.InteropServices.COMException)
+            {
+                MessageBox.Show("Закройте файл Excel", "Информация");
+
+            }
         }
     }
 }

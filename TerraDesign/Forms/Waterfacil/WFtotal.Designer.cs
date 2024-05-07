@@ -36,9 +36,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label21 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox2
@@ -103,16 +107,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(785, 24);
-            this.menuStrip1.TabIndex = 46;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -133,15 +127,44 @@
             this.label5.TabIndex = 93;
             this.label5.Text = "к.";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wordToolStripMenuItem,
+            this.ExcelToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(785, 32);
+            this.menuStrip1.TabIndex = 94;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // wordToolStripMenuItem
+            // 
+            this.wordToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordToolStripMenuItem.Name = "wordToolStripMenuItem";
+            this.wordToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.wordToolStripMenuItem.Text = "Перенос в Word";
+            this.wordToolStripMenuItem.Click += new System.EventHandler(this.wordToolStripMenuItem_Click);
+            // 
+            // ExcelToolStripMenuItem
+            // 
+            this.ExcelToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ExcelToolStripMenuItem.Name = "ExcelToolStripMenuItem";
+            this.ExcelToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.ExcelToolStripMenuItem.Text = "Перенос в Excel";
+            this.ExcelToolStripMenuItem.Click += new System.EventHandler(this.ExcelToolStripMenuItem_Click);
+            // 
             // WFtotal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(785, 299);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -157,6 +180,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Расчёт водоотводных сооружений";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WFtotal_FormClosed);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,8 +196,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem wordToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem ExcelToolStripMenuItem;
     }
 }
