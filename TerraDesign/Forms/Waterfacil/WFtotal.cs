@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
-using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace TerraDesign.Forms.Waterfacil
 {
@@ -27,7 +29,19 @@ namespace TerraDesign.Forms.Waterfacil
             textBox2.Text = Convert.ToString(GlobalVars.hk);
            
         }
+        [DllImport("user32.dll")]
+        private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
 
+        private Microsoft.Office.Interop.Excel.Application excelApp= new Microsoft.Office.Interop.Excel.Application();
+
+        private void CloseExcelApp()
+        {
+            int hWnd = excelApp.Application.Hwnd;
+            uint processID;
+
+            GetWindowThreadProcessId((IntPtr)hWnd, out processID);
+            Process.GetProcessById((int)processID).Kill();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (Form wFcheck in System.Windows.Forms.Application.OpenForms) wFcheck.Hide();
@@ -83,17 +97,17 @@ namespace TerraDesign.Forms.Waterfacil
         {
             try
             {
-                Excel.Application excelApp = new Excel.Application();
-                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
-                Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[1];
+              
+                Microsoft.Office.Interop.Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
+                Microsoft.Office.Interop.Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[1];
 
                 // Записываем данные в ячейки
                 excelWorksheet.Cells[1, 1] = label1.Text;
                 excelWorksheet.Cells[1, 2] = label2.Text;
-                excelWorksheet.Cells[1, 3]= textBox1.Text;
-                excelWorksheet.Cells[2, 1]= label4.Text;
-                excelWorksheet.Cells[2, 2]= label3.Text;
-                excelWorksheet.Cells[2, 3] =textBox2.Text;
+                excelWorksheet.Cells[1, 3] = textBox1.Text;
+                excelWorksheet.Cells[2, 1] = label4.Text;
+                excelWorksheet.Cells[2, 2] = label3.Text;
+                excelWorksheet.Cells[2, 3] = textBox2.Text;
                 excelWorksheet.Columns.AutoFit();
 
                 saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
@@ -109,14 +123,20 @@ namespace TerraDesign.Forms.Waterfacil
                     return;
                 saveFileDialog1.Dispose();
                 MessageBox.Show("Файл успешно сохранён", "Информация");
-                excelWorkbook.Close();
-                excelApp.Quit();
+                excelWorkbook.Close(false);
+                CloseExcelApp();
+               
+               ;
+
+               
+
             }
             catch (System.Runtime.InteropServices.COMException)
             {
                 MessageBox.Show("Закройте файл Excel", "Информация");
 
             }
+          
         }
     }
 }
