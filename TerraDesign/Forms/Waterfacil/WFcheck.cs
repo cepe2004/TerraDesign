@@ -20,14 +20,15 @@ namespace TerraDesign.Forms.Waterfacil
         {
             InitializeComponent();
         }
-        double Q, i, n, m, B, H, w, X, R, W, v;
+        double Q, i, n, m, B=0.4, H=0.3, w, X, R, W, v;
 
         
         private void clearArea()
         {
             if (rbTrape.Checked)
             {
-                w = (B + m / 2 * H) * H;
+                w=(B+m*H)*H;
+                //w = (B + ((m+m) / 2) * H) * H;
             }
             else if (rbTriangle.Checked)
             {
@@ -40,7 +41,8 @@ namespace TerraDesign.Forms.Waterfacil
         { 
         if (rbTrape.Checked)
         {
-                X = B + H * (Math.Sqrt(1 + m * m) + Math.Sqrt(1 + m * m));
+                X=B+(2*(H*Math.Sqrt(1+(m*m))));
+                //X = B + H * (Math.Sqrt(1 + m * m) + Math.Sqrt(1 + m * m));
         }
         else if (rbTriangle.Checked)
         {
@@ -49,10 +51,12 @@ namespace TerraDesign.Forms.Waterfacil
         }
         private double speedCharacteristics(double r)
         {
+           
             if (n == 0.017)
             {
                 switch (r)
                 {
+
                     case 0.10: return 12.0; 
                     case 0.12: return 13.6; 
                     case 0.14: return 15.1;
@@ -199,10 +203,8 @@ namespace TerraDesign.Forms.Waterfacil
             bool success1 = double.TryParse(tbI.Text, out i);
             bool success2 = double.TryParse(cbn.Text, out n);
             bool success3 = double.TryParse(tbm.Text, out m);
-            bool success4 = double.TryParse(cbB.Text, out B);
-            bool success5 = double.TryParse(cbH.Text, out H);
 
-            if (success==false || success1 == false || success2 == false || success3 == false|| success4 == false || success5 == false )
+            if (success==false || success1 == false || success2 == false || success3 == false )
             {
                 MessageBox.Show("Введите числовые значения ", "Информация");
             }

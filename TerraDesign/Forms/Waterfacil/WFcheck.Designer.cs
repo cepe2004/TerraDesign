@@ -48,12 +48,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbTrape = new System.Windows.Forms.RadioButton();
             this.rbTriangle = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbB = new System.Windows.Forms.ComboBox();
-            this.cbH = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -155,7 +149,7 @@
             // 
             this.btCount.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btCount.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btCount.Location = new System.Drawing.Point(270, 517);
+            this.btCount.Location = new System.Drawing.Point(274, 407);
             this.btCount.Name = "btCount";
             this.btCount.Size = new System.Drawing.Size(286, 67);
             this.btCount.TabIndex = 42;
@@ -187,7 +181,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(12, 578);
+            this.label25.Location = new System.Drawing.Point(12, 493);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(833, 31);
             this.label25.TabIndex = 98;
@@ -210,7 +204,7 @@
             // 
             this.groupBox1.Controls.Add(this.rbTrape);
             this.groupBox1.Controls.Add(this.rbTriangle);
-            this.groupBox1.Location = new System.Drawing.Point(68, 411);
+            this.groupBox1.Location = new System.Drawing.Point(68, 283);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(607, 100);
             this.groupBox1.TabIndex = 100;
@@ -239,83 +233,12 @@
             this.rbTriangle.Text = "Треугольная";
             this.rbTriangle.UseVisualStyleBackColor = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(499, 282);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 24);
-            this.label9.TabIndex = 102;
-            this.label9.Text = "B";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(64, 282);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(211, 24);
-            this.label10.TabIndex = 101;
-            this.label10.Text = "Ширина канавы по дну";
-            // 
-            // cbB
-            // 
-            this.cbB.FormattingEnabled = true;
-            this.cbB.Items.AddRange(new object[] {
-            "0,4",
-            "0,5",
-            "0,6",
-            "0,7",
-            "0,8"});
-            this.cbB.Location = new System.Drawing.Point(622, 282);
-            this.cbB.Name = "cbB";
-            this.cbB.Size = new System.Drawing.Size(121, 32);
-            this.cbB.TabIndex = 104;
-            // 
-            // cbH
-            // 
-            this.cbH.FormattingEnabled = true;
-            this.cbH.Items.AddRange(new object[] {
-            "0,3",
-            "0,4",
-            "0,5",
-            "0,6",
-            "0,7",
-            "0,8"});
-            this.cbH.Location = new System.Drawing.Point(622, 331);
-            this.cbH.Name = "cbH";
-            this.cbH.Size = new System.Drawing.Size(121, 32);
-            this.cbH.TabIndex = 107;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(499, 331);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 24);
-            this.label11.TabIndex = 106;
-            this.label11.Text = "H";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(64, 331);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(285, 24);
-            this.label12.TabIndex = 105;
-            this.label12.Text = "Глубина потока воды в канаве";
-            // 
             // WFcheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(853, 618);
-            this.Controls.Add(this.cbH);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.cbB);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.ClientSize = new System.Drawing.Size(853, 532);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbn);
             this.Controls.Add(this.label25);
@@ -370,11 +293,5 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbTrape;
         private System.Windows.Forms.RadioButton rbTriangle;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbB;
-        private System.Windows.Forms.ComboBox cbH;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
     }
 }
