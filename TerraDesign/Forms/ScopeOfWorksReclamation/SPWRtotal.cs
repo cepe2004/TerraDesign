@@ -96,10 +96,14 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
 
                 }
                 else
+                {
+                    doc.Close(false);
+                    wordApp.Quit();
                     return;
+                }
                 saveFileDialog1.Dispose();
                 MessageBox.Show("Файл успешно сохранён", "Информация");
-                doc.Close();
+                doc.Close(false);
                 wordApp.Quit();
             }
             catch (System.Runtime.InteropServices.COMException)
@@ -148,11 +152,16 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
 
                 }
                 else
+                {
+                    excelWorkbook.Close(false);
+                    GlobalVars.CloseExcelApp(excelApp);
                     return;
+                }
+                   
                 saveFileDialog1.Dispose();
                 MessageBox.Show("Файл успешно сохранён", "Информация");
-                excelWorkbook.Close();
-                excelApp.Quit();
+                excelWorkbook.Close(false);
+                GlobalVars.CloseExcelApp(excelApp);
             }
             catch (System.Runtime.InteropServices.COMException)
             {

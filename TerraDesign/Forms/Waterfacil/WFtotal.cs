@@ -29,19 +29,7 @@ namespace TerraDesign.Forms.Waterfacil
             textBox2.Text = Convert.ToString(GlobalVars.hk);
            
         }
-        [DllImport("user32.dll")]
-        private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
-
-        private Microsoft.Office.Interop.Excel.Application excelApp= new Microsoft.Office.Interop.Excel.Application();
-
-        private void CloseExcelApp()
-        {
-            int hWnd = excelApp.Application.Hwnd;
-            uint processID;
-
-            GetWindowThreadProcessId((IntPtr)hWnd, out processID);
-            Process.GetProcessById((int)processID).Kill();
-        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (Form wFcheck in System.Windows.Forms.Application.OpenForms) wFcheck.Hide();
@@ -80,10 +68,14 @@ namespace TerraDesign.Forms.Waterfacil
                     
                 }
                 else
+                {
+                    doc.Close(false);
+                    wordApp.Quit();
                     return;
+                }
                 saveFileDialog1.Dispose();
                 MessageBox.Show("Файл успешно сохранён", "Информация");
-                doc.Close();
+                doc.Close(false);
                 wordApp.Quit();
             }
             catch (System.Runtime.InteropServices.COMException)
@@ -97,7 +89,7 @@ namespace TerraDesign.Forms.Waterfacil
         {
             try
             {
-              
+                Microsoft.Office.Interop.Excel.Application excelApp= new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
                 Microsoft.Office.Interop.Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[1];
 
@@ -120,13 +112,17 @@ namespace TerraDesign.Forms.Waterfacil
 
                 }
                 else
+                {
+                    excelWorkbook.Close(false);
+                    GlobalVars.CloseExcelApp(excelApp);
                     return;
+                }
                 saveFileDialog1.Dispose();
                 MessageBox.Show("Файл успешно сохранён", "Информация");
                 excelWorkbook.Close(false);
-                CloseExcelApp();
-               
-               ;
+                GlobalVars.CloseExcelApp(excelApp);
+
+                ;
 
                
 

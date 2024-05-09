@@ -1,4 +1,8 @@
-﻿namespace TerraDesign
+﻿using System.Diagnostics;
+using System;
+using System.Runtime.InteropServices;
+
+namespace TerraDesign
 {
     internal class GlobalVars
     {
@@ -10,7 +14,16 @@
         public static double[] Sp, Vrgr, Vvos;
         public static bool[] mound;
 
+        [DllImport("user32.dll")]
+        private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+        public static void CloseExcelApp(Microsoft.Office.Interop.Excel.Application excelApp)
+        {
+            int hWnd = excelApp.Application.Hwnd;
+            uint processID;
 
+            GetWindowThreadProcessId((IntPtr)hWnd, out processID);
+            Process.GetProcessById((int)processID).Kill();
+        }
         public static void AvgMarkFirstKm()
         {
             GlobalVars.Hcp = (GlobalVars.H / GlobalVars.N) + GlobalVars.hc;
