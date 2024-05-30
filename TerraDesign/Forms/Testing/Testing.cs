@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TerraDesign.Forms;
 using TerraDesign.Properties;
+using TerraDesign.Тестирование;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TerraDesign
@@ -41,10 +42,7 @@ namespace TerraDesign
                     pictureQuest1.Image = Resources.Боковой_резерв1;
                     pictureQuest2.Image = Resources.Боковой_резерв2;
                     pictureQuest3.Image = Resources.Боковой_резерв3;
-                    for (int i = 0; i < question.Length; i++)
-                    {
-                        lbQuestion.Text = question[i];
-                    }
+                   
                   
                     break;
                            
@@ -177,13 +175,15 @@ namespace TerraDesign
                     }
                     catch (System.IndexOutOfRangeException)
                     {
+                        GlobalVars.IdUser = 1;
                         NpgsqlConnection conn = new NpgsqlConnection("Host = localhost;port = 5432; database = TerraDesign; user id = postgres; password=12345");
-                        NpgsqlDataAdapter adp = new NpgsqlDataAdapter("INSERT INTO public.LateralReserve ("Выберите ширину резерва по верху", "Выберите ширину резерва по низу", "Выберите глубину резерва у внутре", "Выберите крутизну внутреннего отк", "Выберите крутизну внешнего откоса", "Выберите ширину проезжей части") VALUES(question::boolean, true::boolean, true::boolean, true::boolean, false::boolean, true::boolean) returning "id_LateralReserve" Пароль = '" + tbpassword.Text + "';", conn);
-                        //                        INSERT INTO public."LateralReserve" (
-                        //"Выберите ширину резерва по верху", "Выберите ширину резерва по низу", "Выберите глубину резерва у внутре", "Выберите крутизну внутреннего отк", "Выберите крутизну внешнего откоса", "Выберите ширину проезжей части") VALUES(
-                        //true::boolean, true::boolean, true::boolean, true::boolean, false::boolean, true::boolean)
-                        // returning "id_LateralReserve";
-                        throw;
+                        NpgsqlDataAdapter adp = new NpgsqlDataAdapter("INSERT INTO public.\"LateralReserve\" (\"user\", \"L2\", \"L1\", h1, h2, \"1m\", \"1n\", bprc,\"dateTime\") VALUES('" + GlobalVars.IdUser +"'::bigint, '" + questionMark[0] + "'::boolean, '" + questionMark[1] + "'::boolean, '" + questionMark[2] + "'::boolean, '" + questionMark[3] +"'::boolean, '" + questionMark[4] +"'::boolean, '" + questionMark[5] + "'::boolean, '" + questionMark[6] +"'::boolean,'"+DateTime.Now+"'::timestamp without time zone) returning \"id_LateralReserve\" ", conn);
+                        DataTable dt1 = new DataTable();
+                        adp.Fill(dt1);
+                        MessageBox.Show("Ответы получены");
+                        Tema tema = new Tema();
+                        tema.Show();
+                        this.Hide();
                     }
                     
 
@@ -258,7 +258,12 @@ namespace TerraDesign
             Application.Exit();
         }
 
-        
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tema tema = new Tema();
+            tema.Show();
+            this.Hide();
+        }
     }
 }
 

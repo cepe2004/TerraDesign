@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TerraDesign.Forms.FinalVolOfEartworks;
 using TerraDesign.Forms.ScopeOfWorksReclamation;
 using TerraDesign.Forms.Waterfacil;
+using TerraDesign.Тестирование;
 
 namespace TerraDesign.Forms
 {
@@ -58,16 +59,51 @@ namespace TerraDesign.Forms
             MessageBox.Show("              Программа расчётов водоотводных сооружений\n                                и объёмов земляных работ\n  \n              Разработчик - Гребельный Сергей Андреевич,\n                                     студент 901 группы\n              КГБПОУ \"Благовещенский строительный техникум\n                              р.п. Степное Озеро, 2023 год ", "Информация");
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void enterStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if (GlobalVars.IdUser == 0)
+            {
+                Authorization authorization = new Authorization();
+                authorization.Show();
+                this.Hide();
+            }
+            else
+            {
+                
+                GlobalVars.IdUser = 0;
+                this.OnLoad(e);
+            }
+           
         }
 
         private void боковыеРезервыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Testing testing = new Testing("LS");
-            testing.Show();
-            this.Hide();
+            if (GlobalVars.RoleUser == 2)
+            {
+                Testing testing = new Testing("LS");
+                testing.Show();
+                this.Hide();
+            }
+            else
+            {
+                Result result= new Result();
+                result.Show();
+                this.Hide();
+            }
+          
+        }
+
+        private void Tema_Load(object sender, EventArgs e)
+        {
+            if (GlobalVars.IdUser==0)
+            {
+                enterToolStripMenuItem.Text = "Вход";
+                testingToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                enterToolStripMenuItem.Text = "Выход";
+            }
         }
     }
 }

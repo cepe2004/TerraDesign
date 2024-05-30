@@ -30,12 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Testing));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbQuestion = new System.Windows.Forms.Label();
             this.btAnswer = new System.Windows.Forms.Button();
-            this.pictureQuest3 = new System.Windows.Forms.PictureBox();
-            this.pictureQuest1 = new System.Windows.Forms.PictureBox();
-            this.pictureQuest2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbAnswer10 = new System.Windows.Forms.RadioButton();
             this.rbAnswer7 = new System.Windows.Forms.RadioButton();
@@ -47,18 +44,21 @@
             this.rbAnswer6 = new System.Windows.Forms.RadioButton();
             this.rbAnswer2 = new System.Windows.Forms.RadioButton();
             this.rbAnswer1 = new System.Windows.Forms.RadioButton();
+            this.pictureQuest3 = new System.Windows.Forms.PictureBox();
+            this.pictureQuest1 = new System.Windows.Forms.PictureBox();
+            this.pictureQuest2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.назадToolStripMenuItem});
+            this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
@@ -66,12 +66,13 @@
             this.menuStrip1.TabIndex = 81;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // назадToolStripMenuItem
+            // backToolStripMenuItem
             // 
-            this.назадToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
-            this.назадToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.назадToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // lbQuestion
             // 
@@ -92,39 +93,6 @@
             this.btAnswer.Text = "Ответить";
             this.btAnswer.UseVisualStyleBackColor = true;
             this.btAnswer.Click += new System.EventHandler(this.btAnswer_Click);
-            // 
-            // pictureQuest3
-            // 
-            this.pictureQuest3.Image = global::TerraDesign.Properties.Resources.Боковой_резерв3;
-            this.pictureQuest3.Location = new System.Drawing.Point(705, 147);
-            this.pictureQuest3.Name = "pictureQuest3";
-            this.pictureQuest3.Size = new System.Drawing.Size(357, 184);
-            this.pictureQuest3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureQuest3.TabIndex = 96;
-            this.pictureQuest3.TabStop = false;
-            this.pictureQuest3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest3_MouseClick_1);
-            // 
-            // pictureQuest1
-            // 
-            this.pictureQuest1.Image = ((System.Drawing.Image)(resources.GetObject("pictureQuest1.Image")));
-            this.pictureQuest1.Location = new System.Drawing.Point(0, 147);
-            this.pictureQuest1.Name = "pictureQuest1";
-            this.pictureQuest1.Size = new System.Drawing.Size(315, 184);
-            this.pictureQuest1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureQuest1.TabIndex = 95;
-            this.pictureQuest1.TabStop = false;
-            this.pictureQuest1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest1_MouseClick);
-            // 
-            // pictureQuest2
-            // 
-            this.pictureQuest2.Image = global::TerraDesign.Properties.Resources.Боковой_резерв2;
-            this.pictureQuest2.Location = new System.Drawing.Point(321, 147);
-            this.pictureQuest2.Name = "pictureQuest2";
-            this.pictureQuest2.Size = new System.Drawing.Size(378, 184);
-            this.pictureQuest2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureQuest2.TabIndex = 83;
-            this.pictureQuest2.TabStop = false;
-            this.pictureQuest2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest2_MouseClick);
             // 
             // groupBox1
             // 
@@ -266,6 +234,39 @@
             this.rbAnswer1.Text = "Вз.п";
             this.rbAnswer1.UseVisualStyleBackColor = true;
             // 
+            // pictureQuest3
+            // 
+            this.pictureQuest3.Image = global::TerraDesign.Properties.Resources.Боковой_резерв3;
+            this.pictureQuest3.Location = new System.Drawing.Point(705, 147);
+            this.pictureQuest3.Name = "pictureQuest3";
+            this.pictureQuest3.Size = new System.Drawing.Size(357, 184);
+            this.pictureQuest3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureQuest3.TabIndex = 96;
+            this.pictureQuest3.TabStop = false;
+            this.pictureQuest3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest3_MouseClick_1);
+            // 
+            // pictureQuest1
+            // 
+            this.pictureQuest1.Image = ((System.Drawing.Image)(resources.GetObject("pictureQuest1.Image")));
+            this.pictureQuest1.Location = new System.Drawing.Point(0, 147);
+            this.pictureQuest1.Name = "pictureQuest1";
+            this.pictureQuest1.Size = new System.Drawing.Size(315, 184);
+            this.pictureQuest1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureQuest1.TabIndex = 95;
+            this.pictureQuest1.TabStop = false;
+            this.pictureQuest1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest1_MouseClick);
+            // 
+            // pictureQuest2
+            // 
+            this.pictureQuest2.Image = global::TerraDesign.Properties.Resources.Боковой_резерв2;
+            this.pictureQuest2.Location = new System.Drawing.Point(321, 147);
+            this.pictureQuest2.Name = "pictureQuest2";
+            this.pictureQuest2.Size = new System.Drawing.Size(378, 184);
+            this.pictureQuest2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureQuest2.TabIndex = 83;
+            this.pictureQuest2.TabStop = false;
+            this.pictureQuest2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest2_MouseClick);
+            // 
             // Testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -286,11 +287,11 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Testing_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +300,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label lbQuestion;
         private System.Windows.Forms.PictureBox pictureQuest2;
         private System.Windows.Forms.Button btAnswer;

@@ -9,7 +9,7 @@
         public static double[] v,N1,N2,N3,N4,N5;
         public static double[] Sp, Vrgr, Vvos;
         public static bool[] mound;
-        public static int IdUser; 
+        public static int IdUser, RoleUser; 
         public static string FIOUser;
 
 

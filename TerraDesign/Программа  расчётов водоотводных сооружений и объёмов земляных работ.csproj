@@ -173,6 +173,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FinalVolOfEartworks\FVOEcheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,18 +241,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Тестирование\Result.cs">
+    <Compile Include="Forms\Testing\Result.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Тестирование\Result.Designer.cs">
+    <Compile Include="Forms\Testing\Result.Designer.cs">
       <DependentUpon>Result.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Тестирование\Testing.cs">
+    <Compile Include="Forms\Testing\Testing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Тестирование\Testing.Designer.cs">
+    <Compile Include="Forms\Testing\Testing.Designer.cs">
       <DependentUpon>Testing.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinalVolOfEartworks\FVOEcheck.resx">
       <DependentUpon>FVOEcheck.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,10 +288,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Тестирование\Result.resx">
+    <EmbeddedResource Include="Forms\Testing\Result.resx">
       <DependentUpon>Result.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Тестирование\Testing.resx">
+    <EmbeddedResource Include="Forms\Testing\Testing.resx">
       <DependentUpon>Testing.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
