@@ -29,8 +29,8 @@ namespace TerraDesign.Forms
             {
                 try
                 {
-                    NpgsqlConnection conn = new NpgsqlConnection("Host = localhost;port = 5432; database = TerraDesign; user id = postgres; password=12345");
-                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter("select id,\"FIO\",\"id_role\" from \"Users\" where login = '" + tbLogin.Text + "'and password = '" + tbPassword.Text + "'", conn);
+                   
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter("select id,\"FIO\",\"id_role\" from \"Users\" where login = '" + tbLogin.Text + "'and password = '" + tbPassword.Text + "'", GlobalVars.conn);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     int.TryParse(dt.Rows[0][0].ToString(), out GlobalVars.IdUser);

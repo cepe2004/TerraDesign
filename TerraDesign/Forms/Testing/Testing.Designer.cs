@@ -34,10 +34,8 @@
             this.lbQuestion = new System.Windows.Forms.Label();
             this.btAnswer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbAnswer10 = new System.Windows.Forms.RadioButton();
             this.rbAnswer7 = new System.Windows.Forms.RadioButton();
             this.rbAnswer8 = new System.Windows.Forms.RadioButton();
-            this.rbAnswer9 = new System.Windows.Forms.RadioButton();
             this.rbAnswer3 = new System.Windows.Forms.RadioButton();
             this.rbAnswer4 = new System.Windows.Forms.RadioButton();
             this.rbAnswer5 = new System.Windows.Forms.RadioButton();
@@ -47,6 +45,7 @@
             this.pictureQuest3 = new System.Windows.Forms.PictureBox();
             this.pictureQuest1 = new System.Windows.Forms.PictureBox();
             this.pictureQuest2 = new System.Windows.Forms.PictureBox();
+            this.labelFIO = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureQuest3)).BeginInit();
@@ -96,10 +95,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rbAnswer10);
             this.groupBox1.Controls.Add(this.rbAnswer7);
             this.groupBox1.Controls.Add(this.rbAnswer8);
-            this.groupBox1.Controls.Add(this.rbAnswer9);
             this.groupBox1.Controls.Add(this.rbAnswer3);
             this.groupBox1.Controls.Add(this.rbAnswer4);
             this.groupBox1.Controls.Add(this.rbAnswer5);
@@ -111,19 +108,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1061, 114);
             this.groupBox1.TabIndex = 97;
             this.groupBox1.TabStop = false;
-            // 
-            // rbAnswer10
-            // 
-            this.rbAnswer10.AutoSize = true;
-            this.rbAnswer10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbAnswer10.Location = new System.Drawing.Point(911, 28);
-            this.rbAnswer10.Name = "rbAnswer10";
-            this.rbAnswer10.Size = new System.Drawing.Size(87, 35);
-            this.rbAnswer10.TabIndex = 9;
-            this.rbAnswer10.TabStop = true;
-            this.rbAnswer10.Text = "Вз.п";
-            this.rbAnswer10.UseVisualStyleBackColor = true;
-            this.rbAnswer10.Visible = false;
             // 
             // rbAnswer7
             // 
@@ -148,19 +132,6 @@
             this.rbAnswer8.TabStop = true;
             this.rbAnswer8.Text = "L2p";
             this.rbAnswer8.UseVisualStyleBackColor = true;
-            // 
-            // rbAnswer9
-            // 
-            this.rbAnswer9.AutoSize = true;
-            this.rbAnswer9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbAnswer9.Location = new System.Drawing.Point(808, 28);
-            this.rbAnswer9.Name = "rbAnswer9";
-            this.rbAnswer9.Size = new System.Drawing.Size(87, 35);
-            this.rbAnswer9.TabIndex = 6;
-            this.rbAnswer9.TabStop = true;
-            this.rbAnswer9.Text = "Вз.п";
-            this.rbAnswer9.UseVisualStyleBackColor = true;
-            this.rbAnswer9.Visible = false;
             // 
             // rbAnswer3
             // 
@@ -237,9 +208,9 @@
             // pictureQuest3
             // 
             this.pictureQuest3.Image = global::TerraDesign.Properties.Resources.Боковой_резерв3;
-            this.pictureQuest3.Location = new System.Drawing.Point(705, 147);
+            this.pictureQuest3.Location = new System.Drawing.Point(705, 106);
             this.pictureQuest3.Name = "pictureQuest3";
-            this.pictureQuest3.Size = new System.Drawing.Size(357, 184);
+            this.pictureQuest3.Size = new System.Drawing.Size(357, 225);
             this.pictureQuest3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureQuest3.TabIndex = 96;
             this.pictureQuest3.TabStop = false;
@@ -248,9 +219,9 @@
             // pictureQuest1
             // 
             this.pictureQuest1.Image = ((System.Drawing.Image)(resources.GetObject("pictureQuest1.Image")));
-            this.pictureQuest1.Location = new System.Drawing.Point(0, 147);
+            this.pictureQuest1.Location = new System.Drawing.Point(0, 106);
             this.pictureQuest1.Name = "pictureQuest1";
-            this.pictureQuest1.Size = new System.Drawing.Size(315, 184);
+            this.pictureQuest1.Size = new System.Drawing.Size(315, 225);
             this.pictureQuest1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureQuest1.TabIndex = 95;
             this.pictureQuest1.TabStop = false;
@@ -259,19 +230,30 @@
             // pictureQuest2
             // 
             this.pictureQuest2.Image = global::TerraDesign.Properties.Resources.Боковой_резерв2;
-            this.pictureQuest2.Location = new System.Drawing.Point(321, 147);
+            this.pictureQuest2.Location = new System.Drawing.Point(321, 106);
             this.pictureQuest2.Name = "pictureQuest2";
-            this.pictureQuest2.Size = new System.Drawing.Size(378, 184);
+            this.pictureQuest2.Size = new System.Drawing.Size(378, 225);
             this.pictureQuest2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureQuest2.TabIndex = 83;
             this.pictureQuest2.TabStop = false;
             this.pictureQuest2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureQuest2_MouseClick);
+            // 
+            // labelFIO
+            // 
+            this.labelFIO.AutoSize = true;
+            this.labelFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFIO.Location = new System.Drawing.Point(618, 520);
+            this.labelFIO.Name = "labelFIO";
+            this.labelFIO.Size = new System.Drawing.Size(92, 25);
+            this.labelFIO.TabIndex = 98;
+            this.labelFIO.Text = "labelFIO";
             // 
             // Testing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 570);
+            this.Controls.Add(this.labelFIO);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureQuest3);
             this.Controls.Add(this.pictureQuest1);
@@ -307,15 +289,14 @@
         private System.Windows.Forms.PictureBox pictureQuest1;
         private System.Windows.Forms.PictureBox pictureQuest3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbAnswer10;
         private System.Windows.Forms.RadioButton rbAnswer7;
         private System.Windows.Forms.RadioButton rbAnswer8;
-        private System.Windows.Forms.RadioButton rbAnswer9;
         private System.Windows.Forms.RadioButton rbAnswer3;
         private System.Windows.Forms.RadioButton rbAnswer4;
         private System.Windows.Forms.RadioButton rbAnswer5;
         private System.Windows.Forms.RadioButton rbAnswer6;
         private System.Windows.Forms.RadioButton rbAnswer2;
         private System.Windows.Forms.RadioButton rbAnswer1;
+        private System.Windows.Forms.Label labelFIO;
     }
 }

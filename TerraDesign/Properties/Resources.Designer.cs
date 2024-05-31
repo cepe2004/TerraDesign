@@ -93,6 +93,16 @@ namespace TerraDesign.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Водоотводные_сооружения {
+            get {
+                object obj = ResourceManager.GetObject("Водоотводные_сооружения", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap земляное_полотно_в_выемкеjpg {
             get {
                 object obj = ResourceManager.GetObject("земляное полотно в выемкеjpg", resourceCulture);

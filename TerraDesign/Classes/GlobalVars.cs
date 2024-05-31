@@ -1,4 +1,6 @@
-﻿namespace TerraDesign
+﻿using Npgsql;
+
+namespace TerraDesign
 {
     internal class GlobalVars
     {
@@ -11,7 +13,7 @@
         public static bool[] mound;
         public static int IdUser, RoleUser; 
         public static string FIOUser;
-
+        public static NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;port=5432;database=TerraDesign;Username=postgres;password = 12345");
 
         public static void AvgMarkFirstKm()
         {

@@ -76,7 +76,7 @@ namespace TerraDesign.Forms
            
         }
 
-        private void боковыеРезервыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (GlobalVars.RoleUser == 2)
             {
@@ -86,7 +86,7 @@ namespace TerraDesign.Forms
             }
             else
             {
-                Result result= new Result();
+                Result result= new Result("LS");
                 result.Show();
                 this.Hide();
             }
@@ -103,6 +103,22 @@ namespace TerraDesign.Forms
             else
             {
                 enterToolStripMenuItem.Text = "Выход";
+            }
+        }
+
+        private void wFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (GlobalVars.RoleUser == 2)
+            {
+                Testing testing = new Testing("WF");
+                testing.Show();
+                this.Hide();
+            }
+            else
+            {
+                Result result = new Result("WF");
+                result.Show();
+                this.Hide();
             }
         }
     }

@@ -323,6 +323,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppIcon.ico" />
+    <None Include="Properties\Водоотводные сооружения.jpg" />
+    <None Include="Resources\imageWaterFacilities.bmp" />
     <None Include="Properties\Боковой резерв2.jpg" />
     <None Include="Properties\Боковой резерв3.jpg" />
     <None Include="Properties\Боковой резерв1.jpg" />

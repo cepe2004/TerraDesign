@@ -37,8 +37,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.enterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.боковыеРезервыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.водоотводныеСооруженияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -121,25 +121,26 @@
             // testingToolStripMenuItem
             // 
             this.testingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.боковыеРезервыToolStripMenuItem,
-            this.водоотводныеСооруженияToolStripMenuItem});
+            this.lSToolStripMenuItem,
+            this.wFToolStripMenuItem});
             this.testingToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.testingToolStripMenuItem.Name = "testingToolStripMenuItem";
             this.testingToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.testingToolStripMenuItem.Text = "Тестирование";
             // 
-            // боковыеРезервыToolStripMenuItem
+            // lSToolStripMenuItem
             // 
-            this.боковыеРезервыToolStripMenuItem.Name = "боковыеРезервыToolStripMenuItem";
-            this.боковыеРезервыToolStripMenuItem.Size = new System.Drawing.Size(287, 24);
-            this.боковыеРезервыToolStripMenuItem.Text = "Боковые резервы";
-            this.боковыеРезервыToolStripMenuItem.Click += new System.EventHandler(this.боковыеРезервыToolStripMenuItem_Click);
+            this.lSToolStripMenuItem.Name = "lSToolStripMenuItem";
+            this.lSToolStripMenuItem.Size = new System.Drawing.Size(287, 24);
+            this.lSToolStripMenuItem.Text = "Боковые резервы";
+            this.lSToolStripMenuItem.Click += new System.EventHandler(this.lSToolStripMenuItem_Click);
             // 
-            // водоотводныеСооруженияToolStripMenuItem
+            // wFToolStripMenuItem
             // 
-            this.водоотводныеСооруженияToolStripMenuItem.Name = "водоотводныеСооруженияToolStripMenuItem";
-            this.водоотводныеСооруженияToolStripMenuItem.Size = new System.Drawing.Size(287, 24);
-            this.водоотводныеСооруженияToolStripMenuItem.Text = "Водоотводные сооружения";
+            this.wFToolStripMenuItem.Name = "wFToolStripMenuItem";
+            this.wFToolStripMenuItem.Size = new System.Drawing.Size(287, 24);
+            this.wFToolStripMenuItem.Text = "Водоотводные сооружения";
+            this.wFToolStripMenuItem.Click += new System.EventHandler(this.wFToolStripMenuItem_Click);
             // 
             // creditsToolStripMenuItem
             // 
@@ -189,7 +190,7 @@
         private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem боковыеРезервыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem водоотводныеСооруженияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wFToolStripMenuItem;
     }
 }
