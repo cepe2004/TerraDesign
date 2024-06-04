@@ -197,24 +197,41 @@ namespace TerraDesign
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            bool success,success1,success2,success3,success4,success5,success6,success7;
+            success=double.TryParse(textBox1.Text, out GlobalVars.hc);
+            success1=double.TryParse(textBox2.Text, out GlobalVars.Bzp);
+            success2=double.TryParse(textBox3.Text, out GlobalVars.hp);
+            success3=double.TryParse(textBox4.Text, out GlobalVars.m);
+            success4=double.TryParse(textBox5.Text, out GlobalVars.n);
+            success5=double.TryParse(textBox6.Text, out GlobalVars.hdorod);
+            success6=double.TryParse(textBox7.Text, out GlobalVars.bprc);
+            success7=double.TryParse(textBox8.Text, out GlobalVars.bukrp);
+            if (success == false || success1 == false || success2 == false || success3 == false || success4 == false || success5 == false || success6 == false || success7 == false)
             {
-                double.TryParse(textBox1.Text, out GlobalVars.hc);
-                double.TryParse(textBox2.Text, out GlobalVars.Bzp);
-                double.TryParse(textBox3.Text, out GlobalVars.hp);
-                double.TryParse(textBox4.Text, out GlobalVars.m);
-                double.TryParse(textBox5.Text, out GlobalVars.n);
-                double.TryParse(textBox6.Text, out GlobalVars.hdorod);
-                double.TryParse(textBox7.Text, out GlobalVars.bprc);
-                double.TryParse(textBox8.Text, out GlobalVars.bukrp);
-                NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '"+GlobalVars.hc+"'::double precision, \"Bzp\" = '"+GlobalVars.Bzp+"'::double precision, hp = '"+GlobalVars.hp+"'::double precision, m = '"+GlobalVars.m+"'::double precision, n = '"+GlobalVars.n+"'::double precision, hdorod = '"+GlobalVars.hdorod+"'::double precision, bprc = '"+GlobalVars.bprc+"'::double precision, bukrp = '"+GlobalVars.bukrp+"'::double precision WHERE id = '"+GlobalVars.IdUser+"'; ", GlobalVars.conn);
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
+                DialogResult= MessageBox.Show(this, "Заполнены не все поля.\nВы уверены что хотите сохранить данные", " Внимание", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp + "'::double precision, hp = '" + GlobalVars.hp + "'::double precision, m = '" + GlobalVars.m + "'::double precision, n = '" + GlobalVars.n + "'::double precision, hdorod = '" + GlobalVars.hdorod + "'::double precision, bprc = '" + GlobalVars.bprc + "'::double precision, bukrp = '" + GlobalVars.bukrp + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    MessageBox.Show("Сохранение успешно");
+                    DialogResult=DialogResult.None;
+                }
             }
-            catch (Exception)
+            else
             {
-               
-                throw;
+                try
+                {
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp + "'::double precision, hp = '" + GlobalVars.hp + "'::double precision, m = '" + GlobalVars.m + "'::double precision, n = '" + GlobalVars.n + "'::double precision, hdorod = '" + GlobalVars.hdorod + "'::double precision, bprc = '" + GlobalVars.bprc + "'::double precision, bukrp = '" + GlobalVars.bukrp + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    MessageBox.Show("Сохранение успешно");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
         }
 

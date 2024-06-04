@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,16 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
         public FVOEcheck()
         {
             InitializeComponent();
+            if (GlobalVars.IdUser == 0)
+            {
+                saveToolStripMenuItem.Visible = false;
+                loadToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                saveToolStripMenuItem.Visible = true;
+                loadToolStripMenuItem.Visible = true;
+            }
             if (GlobalVars.hc!=0||GlobalVars.Bzp!=0||GlobalVars.hdorod!=0|| GlobalVars.bprc!=0|| GlobalVars.bukrp!=0)
             {
                 var result = MessageBox.Show("Вы хотите использовать данные расчёта боковых резервов", "Информация", MessageBoxButtons.YesNo);
@@ -175,7 +186,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
 
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEnterMark_Click(object sender, EventArgs e)
         {
             int Useless;
             double useless1;
@@ -220,7 +231,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                     }
                         MessageBox.Show("Введены все отметки");
                     textBox10.ReadOnly = true;
-                    button1.Enabled = false;
+                    buttonEnterMark.Enabled = false;
                 }
             }
             else
@@ -229,7 +240,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCount_Click(object sender, EventArgs e)
         
         {
             if (radioButton1.Checked == false && radioButton2.Checked == false)
@@ -349,7 +360,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             }
         }
 
-        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Tema tema=new Tema();
             tema.Show();
@@ -361,7 +372,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonEnterDistance_Click(object sender, EventArgs e)
         {
             if (Plot == null)
             { MessageBox.Show("Введите рабочие метки", "Информация");
@@ -406,19 +417,68 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
            
         }
 
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool success, success1, success2, success3, success4;
+            success = double.TryParse(textBox1.Text, out GlobalVars.hc);
+            success1 = double.TryParse(textBox2.Text, out GlobalVars.Bzp);
+            success2 = double.TryParse(textBox3.Text, out GlobalVars.hdorod);
+            success3 = double.TryParse(textBox4.Text, out GlobalVars.bprc);
+            success4 = double.TryParse(textBox5.Text, out GlobalVars.bukrp);
+            if (success == false || success1 == false || success2 == false || success3 == false || success4 == false)
+            {
+                DialogResult = MessageBox.Show(this, "Заполнены не все поля.\nВы уверены что хотите сохранить данные", " Внимание", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp + "'::double precision, hdorod = '" + GlobalVars.hdorod + "'::double precision, bprc = '" + GlobalVars.bprc + "'::double precision, bukrp = '" + GlobalVars.bukrp + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    MessageBox.Show("Сохранение успешно");
+                    DialogResult = DialogResult.None;
+                }
+            }
+            else
+            {
+                try
+                {
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp + "'::double precision, hdorod = '" + GlobalVars.hdorod + "'::double precision, bprc = '" + GlobalVars.bprc + "'::double precision, bukrp = '" + GlobalVars.bukrp + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    MessageBox.Show("Сохранение успешно");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" SELECT hc, \"Bzp\",hdorod,bprc,bukrp FROM \"Users\" WHERE id = '" + GlobalVars.IdUser + "' ", GlobalVars.conn);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            textBox1.Text = dt.Rows[0][0].ToString();
+            textBox2.Text = dt.Rows[0][1].ToString();
+            textBox3.Text = dt.Rows[0][2].ToString();
+            textBox4.Text = dt.Rows[0][3].ToString();
+            textBox5.Text = dt.Rows[0][4].ToString();
+        }
+
         private void FVOEcheck_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonReset_Click(object sender, EventArgs e)
         {
             WorkMark = null;
             GlobalVars.N = 0;
             i = 0;
             textBox9.ReadOnly = false;
             textBox10.ReadOnly = false;
-            button1.Enabled = true;
+            buttonEnterMark.Enabled = true;
             label38.Text = 1.ToString();
         }
     }

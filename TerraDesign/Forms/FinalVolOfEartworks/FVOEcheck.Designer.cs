@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVOEcheck));
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCount = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEnterMark = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -73,8 +73,6 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -86,28 +84,32 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonEnterDistance = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonCount
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(822, 524);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(286, 67);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Посчитать";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCount.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCount.Location = new System.Drawing.Point(822, 524);
+            this.buttonCount.Name = "buttonCount";
+            this.buttonCount.Size = new System.Drawing.Size(286, 67);
+            this.buttonCount.TabIndex = 64;
+            this.buttonCount.Text = "Посчитать";
+            this.buttonCount.UseVisualStyleBackColor = false;
+            this.buttonCount.Click += new System.EventHandler(this.buttonCount_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.buttonReset);
             this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.buttonEnterMark);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.textBox10);
             this.groupBox4.Controls.Add(this.label20);
@@ -120,16 +122,16 @@
             this.groupBox4.TabIndex = 63;
             this.groupBox4.TabStop = false;
             // 
-            // button4
+            // buttonReset
             // 
-            this.button4.BackColor = System.Drawing.Color.IndianRed;
-            this.button4.Location = new System.Drawing.Point(0, 121);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(283, 67);
-            this.button4.TabIndex = 89;
-            this.button4.Text = "Сброс";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonReset.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonReset.Location = new System.Drawing.Point(0, 121);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(283, 67);
+            this.buttonReset.TabIndex = 89;
+            this.buttonReset.Text = "Сброс";
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // label38
             // 
@@ -141,15 +143,15 @@
             this.label38.TabIndex = 88;
             this.label38.Text = "1";
             // 
-            // button1
+            // buttonEnterMark
             // 
-            this.button1.Location = new System.Drawing.Point(282, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 67);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Подтвердить отметку";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEnterMark.Location = new System.Drawing.Point(282, 121);
+            this.buttonEnterMark.Name = "buttonEnterMark";
+            this.buttonEnterMark.Size = new System.Drawing.Size(286, 67);
+            this.buttonEnterMark.TabIndex = 40;
+            this.buttonEnterMark.Text = "Подтвердить отметку";
+            this.buttonEnterMark.UseVisualStyleBackColor = true;
+            this.buttonEnterMark.Click += new System.EventHandler(this.buttonEnterMark_Click);
             // 
             // label18
             // 
@@ -484,26 +486,6 @@
             this.label29.TabIndex = 71;
             this.label29.Text = "Шаг расчета";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.назадToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1252, 32);
-            this.menuStrip1.TabIndex = 80;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // назадToolStripMenuItem
-            // 
-            this.назадToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
-            this.назадToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.назадToolStripMenuItem.Text = "Назад";
-            this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -610,15 +592,52 @@
             this.label14.TabIndex = 91;
             this.label14.Text = "0";
             // 
-            // button3
+            // buttonEnterDistance
             // 
-            this.button3.Location = new System.Drawing.Point(951, 294);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(286, 67);
-            this.button3.TabIndex = 90;
-            this.button3.Text = "Подтвердить расстояние";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonEnterDistance.Location = new System.Drawing.Point(951, 294);
+            this.buttonEnterDistance.Name = "buttonEnterDistance";
+            this.buttonEnterDistance.Size = new System.Drawing.Size(286, 67);
+            this.buttonEnterDistance.TabIndex = 90;
+            this.buttonEnterDistance.Text = "Подтвердить расстояние";
+            this.buttonEnterDistance.UseVisualStyleBackColor = true;
+            this.buttonEnterDistance.Click += new System.EventHandler(this.buttonEnterDistance_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.loadToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1252, 32);
+            this.menuStrip1.TabIndex = 99;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.saveToolStripMenuItem.Text = "Сохранить";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.loadToolStripMenuItem.Text = "Загрузить";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // FVOEcheck
             // 
@@ -626,7 +645,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1252, 705);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.buttonEnterDistance);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label40);
@@ -638,7 +658,6 @@
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
@@ -654,7 +673,7 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonCount);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox5);
@@ -694,9 +713,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCount;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEnterMark;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label20;
@@ -736,8 +755,6 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
@@ -747,10 +764,14 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonEnterDistance;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
     }
 }
