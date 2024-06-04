@@ -74,7 +74,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -82,6 +82,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -500,8 +502,11 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.назадToolStripMenuItem});
+            this.backToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.loadToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
@@ -509,13 +514,13 @@
             this.menuStrip1.TabIndex = 46;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // назадToolStripMenuItem
+            // backToolStripMenuItem
             // 
-            this.назадToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
-            this.назадToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.назадToolStripMenuItem.Text = "Назад";
-            this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
             // 
             // label21
             // 
@@ -586,6 +591,20 @@
             this.label28.Size = new System.Drawing.Size(833, 31);
             this.label28.TabIndex = 98;
             this.label28.Text = "Используйте запятую [,] как разделитель целой и дробной части";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.saveToolStripMenuItem.Text = "Сохранить";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.loadToolStripMenuItem.Text = "Загрузить";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // LScheck
             // 
@@ -699,7 +718,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
@@ -709,6 +728,8 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
     }
 }
 

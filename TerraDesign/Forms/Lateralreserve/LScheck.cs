@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TerraDesign.Forms;
 using TerraDesign.Forms.Lateralreserve;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TerraDesign
 {
@@ -18,7 +20,16 @@ namespace TerraDesign
         public LScheck()
         {
             InitializeComponent();
-            
+            if (GlobalVars.IdUser == 0)
+            {
+                saveToolStripMenuItem.Visible = false;
+                loadToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                saveToolStripMenuItem.Visible = true;
+                loadToolStripMenuItem.Visible = true;
+            }
         }
         int i = 0;
         bool sredina = true;
@@ -182,6 +193,45 @@ namespace TerraDesign
         private void LScheck_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double.TryParse(textBox1.Text, out GlobalVars.hc);
+                double.TryParse(textBox2.Text, out GlobalVars.Bzp);
+                double.TryParse(textBox3.Text, out GlobalVars.hp);
+                double.TryParse(textBox4.Text, out GlobalVars.m);
+                double.TryParse(textBox5.Text, out GlobalVars.n);
+                double.TryParse(textBox6.Text, out GlobalVars.hdorod);
+                double.TryParse(textBox7.Text, out GlobalVars.bprc);
+                double.TryParse(textBox8.Text, out GlobalVars.bukrp);
+                NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '"+GlobalVars.hc+"'::double precision, \"Bzp\" = '"+GlobalVars.Bzp+"'::double precision, hp = '"+GlobalVars.hp+"'::double precision, m = '"+GlobalVars.m+"'::double precision, n = '"+GlobalVars.n+"'::double precision, hdorod = '"+GlobalVars.hdorod+"'::double precision, bprc = '"+GlobalVars.bprc+"'::double precision, bukrp = '"+GlobalVars.bukrp+"'::double precision WHERE id = '"+GlobalVars.IdUser+"'; ", GlobalVars.conn);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+            }
+            catch (Exception)
+            {
+               
+                throw;
+            }
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" SELECT hc, \"Bzp\",hp,m,n,hdorod,bprc,bukrp FROM \"Users\" WHERE id = '"+GlobalVars.IdUser+"' ", GlobalVars.conn);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            textBox1.Text = dt.Rows[0][0].ToString();
+            textBox2.Text = dt.Rows[0][1].ToString();
+            textBox3.Text = dt.Rows[0][2].ToString();
+            textBox4.Text = dt.Rows[0][3].ToString();
+            textBox5.Text = dt.Rows[0][4].ToString();
+            textBox6.Text = dt.Rows[0][5].ToString();
+            textBox7.Text = dt.Rows[0][6].ToString();
+            textBox8.Text = dt.Rows[0][7].ToString();
+
         }
     }
 }
