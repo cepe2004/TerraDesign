@@ -330,5 +330,8 @@
     <None Include="Properties\Боковой резерв1.jpg" />
     <None Include="Properties\земляное полотно в выемкеjpg.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

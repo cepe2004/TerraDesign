@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAE06439-AA55-41E1-B067-B1F429C1EA1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TerraDesign</RootNamespace>
+    <AssemblyName>TerraDesign</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FinalVolOfEartworks\FVOEcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinalVolOfEartworks\FVOEcheck.Designer.cs">
+      <DependentUpon>FVOEcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FinalVolOfEartworks\FVOEtotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinalVolOfEartworks\FVOEtotal.Designer.cs">
+      <DependentUpon>FVOEtotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lateralreserve\LScheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lateralreserve\LScheck.Designer.cs">
+      <DependentUpon>LScheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lateralreserve\LStotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lateralreserve\LStotal.Designer.cs">
+      <DependentUpon>LStotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GlobalVars.cs" />
+    <Compile Include="Forms\ScopeOfWorksReclamation\SPWRcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScopeOfWorksReclamation\SPWRcheck.Designer.cs">
+      <DependentUpon>SPWRcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScopeOfWorksReclamation\SPWRtotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScopeOfWorksReclamation\SPWRtotal.Designer.cs">
+      <DependentUpon>SPWRtotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tema.Designer.cs">
+      <DependentUpon>Tema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Waterfacil\WFcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Waterfacil\WFcheck.Designer.cs">
+      <DependentUpon>WFcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Waterfacil\WFtotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Waterfacil\WFtotal.Designer.cs">
+      <DependentUpon>WFtotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FinalVolOfEartworks\FVOEcheck.resx">
+      <DependentUpon>FVOEcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FinalVolOfEartworks\FVOEtotal.resx">
+      <DependentUpon>FVOEtotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lateralreserve\LScheck.resx">
+      <DependentUpon>LScheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lateralreserve\LStotal.resx">
+      <DependentUpon>LStotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScopeOfWorksReclamation\SPWRcheck.resx">
+      <DependentUpon>SPWRcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScopeOfWorksReclamation\SPWRtotal.resx">
+      <DependentUpon>SPWRtotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tema.resx">
+      <DependentUpon>Tema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Waterfacil\WFcheck.resx">
+      <DependentUpon>WFcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Waterfacil\WFtotal.resx">
+      <DependentUpon>WFtotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
