@@ -34,7 +34,7 @@
             this.Square = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VRemovedVS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VRestoreR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEnter = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,15 +79,15 @@
             this.VRestoreR.Name = "VRestoreR";
             this.VRestoreR.Width = 400;
             // 
-            // button1
+            // buttonEnter
             // 
-            this.button1.Location = new System.Drawing.Point(403, 589);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 58);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEnter.Location = new System.Drawing.Point(403, 589);
+            this.buttonEnter.Name = "buttonEnter";
+            this.buttonEnter.Size = new System.Drawing.Size(208, 58);
+            this.buttonEnter.TabIndex = 60;
+            this.buttonEnter.Text = "Подтвердить";
+            this.buttonEnter.UseVisualStyleBackColor = true;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // menuStrip2
             // 
@@ -125,7 +125,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1045, 660);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -146,7 +146,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdRes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Square;
         private System.Windows.Forms.DataGridViewTextBoxColumn VRemovedVS;

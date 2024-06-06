@@ -29,83 +29,83 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WFtotal));
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxHk = new System.Windows.Forms.TextBox();
+            this.labelH = new System.Windows.Forms.Label();
+            this.labelDepth = new System.Windows.Forms.Label();
+            this.textBoxB = new System.Windows.Forms.TextBox();
+            this.labelB = new System.Windows.Forms.Label();
+            this.labelWidth = new System.Windows.Forms.Label();
+            this.buttonEnter = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox2
+            // textBoxHk
             // 
-            this.textBox2.Location = new System.Drawing.Point(544, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(151, 29);
-            this.textBox2.TabIndex = 14;
+            this.textBoxHk.Location = new System.Drawing.Point(544, 140);
+            this.textBoxHk.Name = "textBoxHk";
+            this.textBoxHk.ReadOnly = true;
+            this.textBoxHk.Size = new System.Drawing.Size(151, 29);
+            this.textBoxHk.TabIndex = 14;
             // 
-            // label3
+            // labelH
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(449, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 24);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "H";
+            this.labelH.AutoSize = true;
+            this.labelH.Location = new System.Drawing.Point(449, 140);
+            this.labelH.Name = "labelH";
+            this.labelH.Size = new System.Drawing.Size(24, 24);
+            this.labelH.TabIndex = 13;
+            this.labelH.Text = "H";
             // 
-            // label4
+            // labelDepth
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 24);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Глубина канавы";
+            this.labelDepth.AutoSize = true;
+            this.labelDepth.Location = new System.Drawing.Point(91, 128);
+            this.labelDepth.Name = "labelDepth";
+            this.labelDepth.Size = new System.Drawing.Size(152, 24);
+            this.labelDepth.TabIndex = 12;
+            this.labelDepth.Text = "Глубина канавы";
             // 
-            // textBox1
+            // textBoxB
             // 
-            this.textBox1.Location = new System.Drawing.Point(544, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(151, 29);
-            this.textBox1.TabIndex = 11;
+            this.textBoxB.Location = new System.Drawing.Point(544, 71);
+            this.textBoxB.Name = "textBoxB";
+            this.textBoxB.ReadOnly = true;
+            this.textBoxB.Size = new System.Drawing.Size(151, 29);
+            this.textBoxB.TabIndex = 11;
             // 
-            // label2
+            // labelB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(449, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 24);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "B";
+            this.labelB.AutoSize = true;
+            this.labelB.Location = new System.Drawing.Point(449, 71);
+            this.labelB.Name = "labelB";
+            this.labelB.Size = new System.Drawing.Size(22, 24);
+            this.labelB.TabIndex = 10;
+            this.labelB.Text = "B";
             // 
-            // label1
+            // labelWidth
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Ширина канавы по дну";
+            this.labelWidth.AutoSize = true;
+            this.labelWidth.Location = new System.Drawing.Point(91, 71);
+            this.labelWidth.Name = "labelWidth";
+            this.labelWidth.Size = new System.Drawing.Size(211, 24);
+            this.labelWidth.TabIndex = 9;
+            this.labelWidth.Text = "Ширина канавы по дну";
             // 
-            // button1
+            // buttonEnter
             // 
-            this.button1.Location = new System.Drawing.Point(232, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(269, 62);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEnter.Location = new System.Drawing.Point(232, 214);
+            this.buttonEnter.Name = "buttonEnter";
+            this.buttonEnter.Size = new System.Drawing.Size(269, 62);
+            this.buttonEnter.TabIndex = 15;
+            this.buttonEnter.Text = "Подтвердить";
+            this.buttonEnter.UseVisualStyleBackColor = true;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // label21
             // 
@@ -165,13 +165,13 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonEnter);
+            this.Controls.Add(this.textBoxHk);
+            this.Controls.Add(this.labelH);
+            this.Controls.Add(this.labelDepth);
+            this.Controls.Add(this.textBoxB);
+            this.Controls.Add(this.labelB);
+            this.Controls.Add(this.labelWidth);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -189,13 +189,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxHk;
+        private System.Windows.Forms.Label labelH;
+        private System.Windows.Forms.Label labelDepth;
+        private System.Windows.Forms.TextBox textBoxB;
+        private System.Windows.Forms.Label labelB;
+        private System.Windows.Forms.Label labelWidth;
+        private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MenuStrip menuStrip1;

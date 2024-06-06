@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tema));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonLS = new System.Windows.Forms.Button();
+            this.buttonWF = new System.Windows.Forms.Button();
+            this.buttonFVOE = new System.Windows.Forms.Button();
+            this.buttonSPWR = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.enterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,57 +54,59 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Выберите вид расчёта";
             // 
-            // button1
+            // buttonLS
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(73, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(304, 133);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Расчёт боковых резервов";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLS.Location = new System.Drawing.Point(73, 104);
+            this.buttonLS.Name = "buttonLS";
+            this.buttonLS.Size = new System.Drawing.Size(304, 133);
+            this.buttonLS.TabIndex = 1;
+            this.buttonLS.Text = "Расчёт боковых резервов";
+            this.buttonLS.UseVisualStyleBackColor = true;
+            this.buttonLS.Click += new System.EventHandler(this.buttonLS_Click);
             // 
-            // button2
+            // buttonWF
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(73, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(304, 133);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Расчёт водоотводных канав";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonWF.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonWF.Location = new System.Drawing.Point(73, 295);
+            this.buttonWF.Name = "buttonWF";
+            this.buttonWF.Size = new System.Drawing.Size(304, 133);
+            this.buttonWF.TabIndex = 2;
+            this.buttonWF.Text = "Расчёт водоотводных канав";
+            this.buttonWF.UseVisualStyleBackColor = true;
+            this.buttonWF.Click += new System.EventHandler(this.buttonWF_Click);
             // 
-            // button3
+            // buttonFVOE
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(498, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(304, 133);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Расчёт итоговых объёмов земляных работ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonFVOE.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonFVOE.Location = new System.Drawing.Point(498, 104);
+            this.buttonFVOE.Name = "buttonFVOE";
+            this.buttonFVOE.Size = new System.Drawing.Size(304, 133);
+            this.buttonFVOE.TabIndex = 3;
+            this.buttonFVOE.Text = "Расчёт итоговых объёмов земляных работ";
+            this.buttonFVOE.UseVisualStyleBackColor = true;
+            this.buttonFVOE.Click += new System.EventHandler(this.buttonFVOE_Click);
             // 
-            // button4
+            // buttonSPWR
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(498, 295);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(304, 133);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Расчёт объёмов работ по рекультивации";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonSPWR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSPWR.Location = new System.Drawing.Point(498, 295);
+            this.buttonSPWR.Name = "buttonSPWR";
+            this.buttonSPWR.Size = new System.Drawing.Size(304, 133);
+            this.buttonSPWR.TabIndex = 4;
+            this.buttonSPWR.Text = "Расчёт объёмов работ по рекультивации";
+            this.buttonSPWR.UseVisualStyleBackColor = true;
+            this.buttonSPWR.Click += new System.EventHandler(this.buttonSPWR_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.enterToolStripMenuItem,
             this.testingToolStripMenuItem,
-            this.creditsToolStripMenuItem});
+            this.creditsToolStripMenuItem,
+            this.managementToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(875, 28);
@@ -150,16 +153,23 @@
             this.creditsToolStripMenuItem.Text = "О программе";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
+            // managementToolStripMenuItem
+            // 
+            this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
+            this.managementToolStripMenuItem.Text = "Управление";
+            this.managementToolStripMenuItem.Click += new System.EventHandler(this.managementToolStripMenuItem_Click);
+            // 
             // Tema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(875, 477);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSPWR);
+            this.Controls.Add(this.buttonFVOE);
+            this.Controls.Add(this.buttonWF);
+            this.Controls.Add(this.buttonLS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -182,15 +192,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonLS;
+        private System.Windows.Forms.Button buttonWF;
+        private System.Windows.Forms.Button buttonFVOE;
+        private System.Windows.Forms.Button buttonSPWR;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
     }
 }

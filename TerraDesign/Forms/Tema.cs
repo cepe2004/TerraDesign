@@ -21,28 +21,28 @@ namespace TerraDesign.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLS_Click(object sender, EventArgs e)
         {
             LScheck lScheck=new LScheck();
             lScheck.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonWF_Click(object sender, EventArgs e)
         {
             WFcheck wFcheck= new WFcheck();
             wFcheck.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonFVOE_Click(object sender, EventArgs e)
         {
             FVOEcheck fVOEcheck=new FVOEcheck();
             fVOEcheck.Show();
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonSPWR_Click(object sender, EventArgs e)
         {
             SPWRcheck sPWRcheck=new SPWRcheck();
             sPWRcheck.Show();
@@ -99,10 +99,17 @@ namespace TerraDesign.Forms
             {
                 enterToolStripMenuItem.Text = "Вход";
                 testingToolStripMenuItem.Visible = false;
+                managementToolStripMenuItem.Visible = false;
+            }
+            else if (GlobalVars.RoleUser==3)
+            {
+                testingToolStripMenuItem.Visible = false;
+                enterToolStripMenuItem.Text = "Выход";
             }
             else
             {
                 enterToolStripMenuItem.Text = "Выход";
+                managementToolStripMenuItem.Visible = false;
             }
         }
 
@@ -120,6 +127,13 @@ namespace TerraDesign.Forms
                 result.Show();
                 this.Hide();
             }
+        }
+
+        private void managementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SysAdmin sysAdmin= new SysAdmin();
+            sysAdmin.Show();
+            this.Hide();
         }
     }
 }

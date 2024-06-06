@@ -22,27 +22,22 @@ namespace TerraDesign.Forms.Waterfacil
         }
         double Q, i, n, m, B=0.4, H=0.3, w, X, R, W, v;
 
-        
         private void clearArea()
         {
             if (rbTrape.Checked)
             {
                 w=(B+m*H)*H;
-                //w = (B + ((m+m) / 2) * H) * H;
             }
             else if (rbTriangle.Checked)
             {
                 w = m * (H * H);
             }
-
-            
         }
         private void wettedPerimeter()
         { 
         if (rbTrape.Checked)
         {
-                X=B+(2*(H*Math.Sqrt(1+(m*m))));
-                //X = B + H * (Math.Sqrt(1 + m * m) + Math.Sqrt(1 + m * m));
+                X = B + (2 * (H * Math.Sqrt(1 + (m * m))));
         }
         else if (rbTriangle.Checked)
         {
@@ -196,9 +191,8 @@ namespace TerraDesign.Forms.Waterfacil
             return 0;
         }
 
-            private void button2_Click(object sender, EventArgs e)
-        {
-            
+            private void buttonCount_Click(object sender, EventArgs e)
+            {
             bool success = double.TryParse(tbQ.Text, out Q);
             bool success1 = double.TryParse(tbI.Text, out i);
             bool success2 = double.TryParse(cbn.Text, out n);
@@ -215,12 +209,8 @@ namespace TerraDesign.Forms.Waterfacil
                 wettedPerimeter();
                 R = w / X;
                 R = Math.Round(R, 2);
-               W=speedCharacteristics(R);
-              
-           
+                W=speedCharacteristics(R);
                 decimal Rm = new decimal(R);
-             
-
                 if (Rm % 0.02m != 0 && R<40)
                 {
                     double R1, R2,W1,W2;
@@ -274,7 +264,6 @@ namespace TerraDesign.Forms.Waterfacil
                     {
                         B = B - 0.01;
                         goto start;
-                        
                     }
                     else
                     {
@@ -283,8 +272,6 @@ namespace TerraDesign.Forms.Waterfacil
                             H = H - 0.01;
                             goto start;
                         }   
-                       
-                    
                     }
                 }
                 else if (GlobalVars.Q < Q2)
@@ -302,24 +289,18 @@ namespace TerraDesign.Forms.Waterfacil
                             B = B + 0.01;
                             goto start;
                         }
-
-
                     }
                     goto start;
-
-
                 }
-
                 GlobalVars.bk = B;
                 GlobalVars.hk= H+0.2;
-                
                 WFtotal wFtotal = new WFtotal();
                 wFtotal.Show();
             }
 
         }
 
-        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Tema tema = new Tema();
             tema.Show();

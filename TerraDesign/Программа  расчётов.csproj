@@ -215,6 +215,12 @@
     <Compile Include="Forms\ScopeOfWorksReclamation\SPWRtotal.Designer.cs">
       <DependentUpon>SPWRtotal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SysAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SysAdmin.Designer.cs">
+      <DependentUpon>SysAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ScopeOfWorksReclamation\SPWRtotal.resx">
       <DependentUpon>SPWRtotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SysAdmin.resx">
+      <DependentUpon>SysAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tema.resx">
       <DependentUpon>Tema.cs</DependentUpon>

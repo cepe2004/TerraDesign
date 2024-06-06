@@ -32,45 +32,45 @@
             this.buttonCount = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonReset = new System.Windows.Forms.Button();
-            this.label38 = new System.Windows.Forms.Label();
+            this.labelWorkmark = new System.Windows.Forms.Label();
             this.buttonEnterMark = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxH = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxN1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.radioButtonEmbankment = new System.Windows.Forms.RadioButton();
+            this.radioButtonRecess = new System.Windows.Forms.RadioButton();
+            this.textBoxBukrp = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxBprc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxHdorod = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxBzp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxHc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxHk = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxBk = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxN = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBoxM = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBoxL = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -82,8 +82,8 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxDist = new System.Windows.Forms.TextBox();
+            this.labelDist = new System.Windows.Forms.Label();
             this.buttonEnterDistance = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,12 +108,12 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.buttonReset);
-            this.groupBox4.Controls.Add(this.label38);
+            this.groupBox4.Controls.Add(this.labelWorkmark);
             this.groupBox4.Controls.Add(this.buttonEnterMark);
             this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.textBoxH);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.textBoxN1);
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Location = new System.Drawing.Point(669, 19);
@@ -133,15 +133,15 @@
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
-            // label38
+            // labelWorkmark
             // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(334, 94);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(14, 16);
-            this.label38.TabIndex = 88;
-            this.label38.Text = "1";
+            this.labelWorkmark.AutoSize = true;
+            this.labelWorkmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWorkmark.Location = new System.Drawing.Point(334, 94);
+            this.labelWorkmark.Name = "labelWorkmark";
+            this.labelWorkmark.Size = new System.Drawing.Size(14, 16);
+            this.labelWorkmark.TabIndex = 88;
+            this.labelWorkmark.Text = "1";
             // 
             // buttonEnterMark
             // 
@@ -162,12 +162,12 @@
             this.label18.TabIndex = 34;
             this.label18.Text = "Количество рабочих  отметок";
             // 
-            // textBox10
+            // textBoxH
             // 
-            this.textBox10.Location = new System.Drawing.Point(395, 81);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(151, 29);
-            this.textBox10.TabIndex = 39;
+            this.textBoxH.Location = new System.Drawing.Point(395, 81);
+            this.textBoxH.Name = "textBoxH";
+            this.textBoxH.Size = new System.Drawing.Size(151, 29);
+            this.textBoxH.TabIndex = 39;
             // 
             // label20
             // 
@@ -178,12 +178,12 @@
             this.label20.TabIndex = 37;
             this.label20.Text = "Рабочая отметка";
             // 
-            // textBox9
+            // textBoxN1
             // 
-            this.textBox9.Location = new System.Drawing.Point(395, 16);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(151, 29);
-            this.textBox9.TabIndex = 36;
+            this.textBoxN1.Location = new System.Drawing.Point(395, 16);
+            this.textBoxN1.Name = "textBoxN1";
+            this.textBoxN1.Size = new System.Drawing.Size(151, 29);
+            this.textBoxN1.TabIndex = 36;
             // 
             // label19
             // 
@@ -205,8 +205,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButtonEmbankment);
+            this.groupBox1.Controls.Add(this.radioButtonRecess);
             this.groupBox1.Location = new System.Drawing.Point(672, 377);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(568, 100);
@@ -214,34 +214,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Признак 1-ой рабочей отметки";
             // 
-            // radioButton1
+            // radioButtonEmbankment
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(312, 41);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 28);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "насыпь";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonEmbankment.AutoSize = true;
+            this.radioButtonEmbankment.Location = new System.Drawing.Point(312, 41);
+            this.radioButtonEmbankment.Name = "radioButtonEmbankment";
+            this.radioButtonEmbankment.Size = new System.Drawing.Size(94, 28);
+            this.radioButtonEmbankment.TabIndex = 16;
+            this.radioButtonEmbankment.TabStop = true;
+            this.radioButtonEmbankment.Text = "насыпь";
+            this.radioButtonEmbankment.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonRecess
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(451, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(95, 28);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "выемка";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonRecess.AutoSize = true;
+            this.radioButtonRecess.Location = new System.Drawing.Point(451, 41);
+            this.radioButtonRecess.Name = "radioButtonRecess";
+            this.radioButtonRecess.Size = new System.Drawing.Size(95, 28);
+            this.radioButtonRecess.TabIndex = 17;
+            this.radioButtonRecess.TabStop = true;
+            this.radioButtonRecess.Text = "выемка";
+            this.radioButtonRecess.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // textBoxBukrp
             // 
-            this.textBox5.Location = new System.Drawing.Point(495, 274);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 29);
-            this.textBox5.TabIndex = 56;
+            this.textBoxBukrp.Location = new System.Drawing.Point(495, 274);
+            this.textBoxBukrp.Name = "textBoxBukrp";
+            this.textBoxBukrp.Size = new System.Drawing.Size(151, 29);
+            this.textBoxBukrp.TabIndex = 56;
             // 
             // label9
             // 
@@ -261,12 +261,12 @@
             this.label10.TabIndex = 54;
             this.label10.Text = "Ширина укрепительной полосы";
             // 
-            // textBox4
+            // textBoxBprc
             // 
-            this.textBox4.Location = new System.Drawing.Point(495, 216);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 29);
-            this.textBox4.TabIndex = 53;
+            this.textBoxBprc.Location = new System.Drawing.Point(495, 216);
+            this.textBoxBprc.Name = "textBoxBprc";
+            this.textBoxBprc.Size = new System.Drawing.Size(151, 29);
+            this.textBoxBprc.TabIndex = 53;
             // 
             // label7
             // 
@@ -286,12 +286,12 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "Ширина проезжей части";
             // 
-            // textBox3
+            // textBoxHdorod
             // 
-            this.textBox3.Location = new System.Drawing.Point(495, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 29);
-            this.textBox3.TabIndex = 50;
+            this.textBoxHdorod.Location = new System.Drawing.Point(495, 158);
+            this.textBoxHdorod.Name = "textBoxHdorod";
+            this.textBoxHdorod.Size = new System.Drawing.Size(151, 29);
+            this.textBoxHdorod.TabIndex = 50;
             // 
             // label5
             // 
@@ -311,12 +311,12 @@
             this.label6.TabIndex = 48;
             this.label6.Text = "Тольщина дорожной одежды";
             // 
-            // textBox2
+            // textBoxBzp
             // 
-            this.textBox2.Location = new System.Drawing.Point(495, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 29);
-            this.textBox2.TabIndex = 47;
+            this.textBoxBzp.Location = new System.Drawing.Point(495, 100);
+            this.textBoxBzp.Name = "textBoxBzp";
+            this.textBoxBzp.Size = new System.Drawing.Size(151, 29);
+            this.textBoxBzp.TabIndex = 47;
             // 
             // label3
             // 
@@ -336,12 +336,12 @@
             this.label4.TabIndex = 45;
             this.label4.Text = "Ширина земляного полотна по верху";
             // 
-            // textBox1
+            // textBoxHc
             // 
-            this.textBox1.Location = new System.Drawing.Point(495, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 29);
-            this.textBox1.TabIndex = 44;
+            this.textBoxHc.Location = new System.Drawing.Point(495, 42);
+            this.textBoxHc.Name = "textBoxHc";
+            this.textBoxHc.Size = new System.Drawing.Size(151, 29);
+            this.textBoxHc.TabIndex = 44;
             // 
             // label2
             // 
@@ -361,12 +361,12 @@
             this.label1.TabIndex = 42;
             this.label1.Text = "Толщина растительного слоя";
             // 
-            // textBox6
+            // textBoxHk
             // 
-            this.textBox6.Location = new System.Drawing.Point(495, 390);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 29);
-            this.textBox6.TabIndex = 70;
+            this.textBoxHk.Location = new System.Drawing.Point(495, 390);
+            this.textBoxHk.Name = "textBoxHk";
+            this.textBoxHk.Size = new System.Drawing.Size(151, 29);
+            this.textBoxHk.TabIndex = 70;
             // 
             // label11
             // 
@@ -386,12 +386,12 @@
             this.label13.TabIndex = 68;
             this.label13.Text = "Глубина канавы";
             // 
-            // textBox7
+            // textBoxBk
             // 
-            this.textBox7.Location = new System.Drawing.Point(495, 332);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(151, 29);
-            this.textBox7.TabIndex = 67;
+            this.textBoxBk.Location = new System.Drawing.Point(495, 332);
+            this.textBoxBk.Name = "textBoxBk";
+            this.textBoxBk.Size = new System.Drawing.Size(151, 29);
+            this.textBoxBk.TabIndex = 67;
             // 
             // label15
             // 
@@ -411,12 +411,12 @@
             this.label21.TabIndex = 65;
             this.label21.Text = "Ширина канавы по дну";
             // 
-            // textBox11
+            // textBoxN
             // 
-            this.textBox11.Location = new System.Drawing.Point(495, 564);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(151, 29);
-            this.textBox11.TabIndex = 79;
+            this.textBoxN.Location = new System.Drawing.Point(495, 564);
+            this.textBoxN.Name = "textBoxN";
+            this.textBoxN.Size = new System.Drawing.Size(151, 29);
+            this.textBoxN.TabIndex = 79;
             // 
             // label24
             // 
@@ -436,12 +436,12 @@
             this.label25.TabIndex = 77;
             this.label25.Text = "Крутизна внешнего откоса";
             // 
-            // textBox12
+            // textBoxM
             // 
-            this.textBox12.Location = new System.Drawing.Point(495, 506);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(151, 29);
-            this.textBox12.TabIndex = 76;
+            this.textBoxM.Location = new System.Drawing.Point(495, 506);
+            this.textBoxM.Name = "textBoxM";
+            this.textBoxM.Size = new System.Drawing.Size(151, 29);
+            this.textBoxM.TabIndex = 76;
             // 
             // label26
             // 
@@ -461,12 +461,12 @@
             this.label27.TabIndex = 74;
             this.label27.Text = "Крутизна внутреннего откоса";
             // 
-            // textBox13
+            // textBoxL
             // 
-            this.textBox13.Location = new System.Drawing.Point(495, 448);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(151, 29);
-            this.textBox13.TabIndex = 73;
+            this.textBoxL.Location = new System.Drawing.Point(495, 448);
+            this.textBoxL.Name = "textBoxL";
+            this.textBoxL.Size = new System.Drawing.Size(151, 29);
+            this.textBoxL.TabIndex = 73;
             // 
             // label28
             // 
@@ -575,22 +575,22 @@
             this.label12.TabIndex = 90;
             this.label12.Text = "Расстояние в точке перехода на \r\nучастке";
             // 
-            // textBox8
+            // textBoxDist
             // 
-            this.textBox8.Location = new System.Drawing.Point(1064, 251);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(151, 29);
-            this.textBox8.TabIndex = 92;
+            this.textBoxDist.Location = new System.Drawing.Point(1064, 251);
+            this.textBoxDist.Name = "textBoxDist";
+            this.textBoxDist.ReadOnly = true;
+            this.textBoxDist.Size = new System.Drawing.Size(151, 29);
+            this.textBoxDist.TabIndex = 92;
             // 
-            // label14
+            // labelDist
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1016, 254);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(20, 24);
-            this.label14.TabIndex = 91;
-            this.label14.Text = "0";
+            this.labelDist.AutoSize = true;
+            this.labelDist.Location = new System.Drawing.Point(1016, 254);
+            this.labelDist.Name = "labelDist";
+            this.labelDist.Size = new System.Drawing.Size(20, 24);
+            this.labelDist.TabIndex = 91;
+            this.labelDist.Text = "0";
             // 
             // buttonEnterDistance
             // 
@@ -648,9 +648,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.buttonEnterDistance);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxDist);
             this.Controls.Add(this.label40);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.labelDist);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
@@ -658,37 +658,37 @@
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBoxN);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBoxM);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBoxL);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxHk);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxBk);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.buttonCount);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxBukrp);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxBprc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxHdorod);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxBzp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxHc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -717,45 +717,45 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonEnterMark;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxH;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxN1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.RadioButton radioButtonEmbankment;
+        private System.Windows.Forms.RadioButton radioButtonRecess;
+        private System.Windows.Forms.TextBox textBoxBukrp;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxBprc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxHdorod;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxBzp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxHc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxHk;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxBk;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxN;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBoxM;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBoxL;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label labelWorkmark;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
@@ -766,8 +766,8 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxDist;
+        private System.Windows.Forms.Label labelDist;
         private System.Windows.Forms.Button buttonEnterDistance;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;

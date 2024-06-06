@@ -20,10 +20,10 @@ namespace TerraDesign.Forms.Lateralreserve
             InitializeComponent();
             if (sr==false)
             {
-                label10.Visible = false;
-                label9.Visible = false;
-                label14.Visible = false;
-                textBox5.Visible = false;
+                labelSredina.Visible = false;
+                labelH.Visible = false;
+                labelH3.Visible = false;
+                textBoxH3.Visible = false;
             }
             
             GlobalVars.L1p=Math.Round(GlobalVars.L1p, 2);
@@ -31,14 +31,14 @@ namespace TerraDesign.Forms.Lateralreserve
             GlobalVars.h1 = Math.Round(GlobalVars.h1, 2);
             GlobalVars.h2 = Math.Round(GlobalVars.h2, 2);
             GlobalVars.h3 = Math.Round(GlobalVars.h3, 2);
-            textBox1.Text =Convert.ToString(GlobalVars.L1p);
-            textBox2.Text = Convert.ToString(GlobalVars.L2p);
-            textBox3.Text = Convert.ToString(GlobalVars.h1);
-            textBox4.Text = Convert.ToString(GlobalVars.h2);
-            textBox5.Text = Convert.ToString(GlobalVars.h3);
+            textBoxL1p.Text =Convert.ToString(GlobalVars.L1p);
+            textBoxL2p.Text = Convert.ToString(GlobalVars.L2p);
+            textBoxH1.Text = Convert.ToString(GlobalVars.h1);
+            textBoxH2.Text = Convert.ToString(GlobalVars.h2);
+            textBoxH3.Text = Convert.ToString(GlobalVars.h3);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEnter_Click(object sender, EventArgs e)
         {
             foreach (Form wFcheck in System.Windows.Forms.Application.OpenForms) wFcheck.Hide();
             Tema tema = new Tema();
@@ -61,20 +61,18 @@ namespace TerraDesign.Forms.Lateralreserve
                 // Добавление текста в документ
                 Paragraph para = doc.Paragraphs.Add();
                 Microsoft.Office.Interop.Word.Range rng = para.Range;
-                rng.Text = label1.Text + "   " + label2.Text + "1р  " + textBox1.Text + "\n" +
-                    label4.Text + "   " + label3.Text + "2р  " + textBox2.Text + "\n" +
-                    label6.Text + "   " + label5.Text + "1  " + textBox3.Text + "\n" +
-                    label8.Text + "   " + label7.Text + "2  " + textBox4.Text + "\n" +
-                    label10.Text + "   " + label9.Text + "3  " + textBox5.Text + "\n";
+                rng.Text = labelWidthDown.Text + "   " + labelL1p.Text + "1р  " + textBoxL1p.Text + "\n" +
+                    labelWidthUp.Text + "   " + labelL2p.Text + "2р  " + textBoxL2p.Text + "\n" +
+                    labelDepthInside.Text + "   " + labelH1.Text + "1  " + textBoxH1.Text + "\n" +
+                    labelDepthOutside.Text + "   " + labelH2.Text + "2  " + textBoxH2.Text + "\n" +
+                    labelSredina.Text + "   " + labelH.Text + "3  " + textBoxH3.Text + "\n";
 
                 saveFileDialog1.Filter = "doc files (*.doc)|*.doc|All files (*.*)|*.*";
                 saveFileDialog1.FilterIndex = 1;
                 saveFileDialog1.RestoreDirectory = true;
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-
                     doc.SaveAs2(saveFileDialog1.FileName, saveFileDialog1.FilterIndex);
-
                 }
                 else
                 {
@@ -90,7 +88,6 @@ namespace TerraDesign.Forms.Lateralreserve
             catch (System.Runtime.InteropServices.COMException)
             {
                 MessageBox.Show("Закройте файл Word", "Информация");
-
             }
         }
 
@@ -103,32 +100,28 @@ namespace TerraDesign.Forms.Lateralreserve
                 Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[1];
 
                 // Записываем данные в ячейки
-                excelWorksheet.Cells[1, 1] = label1.Text;
-                excelWorksheet.Cells[1, 2] = label2.Text+"1p";
-                excelWorksheet.Cells[1, 3] = textBox1.Text;
-                excelWorksheet.Cells[2, 1] = label4.Text;
-                excelWorksheet.Cells[2, 2] = label3.Text+"2p";
-                excelWorksheet.Cells[2, 3] = textBox2.Text;
-                excelWorksheet.Cells[3, 1] = label6.Text;
-                excelWorksheet.Cells[3, 2] = label5.Text+"1";
-                excelWorksheet.Cells[3, 3] = textBox3.Text;
-                excelWorksheet.Cells[4, 1] = label8.Text;
-                excelWorksheet.Cells[4, 2] = label7.Text+"2";
-                excelWorksheet.Cells[4, 3] = textBox4.Text;
-                excelWorksheet.Cells[5, 1] = label10.Text;
-                excelWorksheet.Cells[5, 2] = label9.Text+"3";
-                excelWorksheet.Cells[5, 3] = textBox5.Text;
-
+                excelWorksheet.Cells[1, 1] = labelWidthDown.Text;
+                excelWorksheet.Cells[1, 2] = labelL1p.Text+"1p";
+                excelWorksheet.Cells[1, 3] = textBoxL1p.Text;
+                excelWorksheet.Cells[2, 1] = labelWidthUp.Text;
+                excelWorksheet.Cells[2, 2] = labelL2p.Text+"2p";
+                excelWorksheet.Cells[2, 3] = textBoxL2p.Text;
+                excelWorksheet.Cells[3, 1] = labelDepthInside.Text;
+                excelWorksheet.Cells[3, 2] = labelH1.Text+"1";
+                excelWorksheet.Cells[3, 3] = textBoxH1.Text;
+                excelWorksheet.Cells[4, 1] = labelDepthOutside.Text;
+                excelWorksheet.Cells[4, 2] = labelH2.Text+"2";
+                excelWorksheet.Cells[4, 3] = textBoxH2.Text;
+                excelWorksheet.Cells[5, 1] = labelSredina.Text;
+                excelWorksheet.Cells[5, 2] = labelH.Text+"3";
+                excelWorksheet.Cells[5, 3] = textBoxH3.Text;
                 excelWorksheet.Columns.AutoFit();
-
                 saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
                 saveFileDialog1.FilterIndex = 1;
                 saveFileDialog1.RestoreDirectory = true;
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-
                     excelWorkbook.SaveAs(saveFileDialog1.FileName, saveFileDialog1.FilterIndex);
-
                 }
                 else
                 {

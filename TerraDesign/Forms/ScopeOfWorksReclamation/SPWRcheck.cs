@@ -21,19 +21,17 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                 var result = MessageBox.Show("Вы хотите использовать данные расчёта боковых резервов", "Информация", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    textBox3.Text = Convert.ToString(GlobalVars.h1);
-                    textBox4.Text = Convert.ToString(GlobalVars.h2);
-                    textBox5.Text = Convert.ToString(GlobalVars.L1p);
-                    textBox9.Text = Convert.ToString(GlobalVars.L2p);
-           
-
+                    textBoxH1p.Text = Convert.ToString(GlobalVars.h1);
+                    textBoxH2p.Text = Convert.ToString(GlobalVars.h2);
+                    textBoxL1p.Text = Convert.ToString(GlobalVars.L1p);
+                    textBoxL2p.Text = Convert.ToString(GlobalVars.L2p);
                 }
             }
         }
         int i = 0;
         double[] h1p,h2p,L1p,L2p,Lp,m,n,hpc;
 
-        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Tema tema = new Tema();
             tema.Show();
@@ -45,7 +43,7 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonReset_Click(object sender, EventArgs e)
         {
             h1p = null;
             h2p=null;
@@ -55,41 +53,39 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
             m = null;
             n = null;
             hpc = null;
-            textBox1.ReadOnly = false;
-            textBox2.ReadOnly = false;
+            textBoxN.ReadOnly = false;
+            textBoxReserve.ReadOnly = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
             
-            if (textBox2.ReadOnly == true)
+            if (textBoxReserve.ReadOnly == true)
             {
                 MessageBox.Show("Введите номер и данные резерва, а затем нажмите редактировать");
-                textBox2.ReadOnly =false;
+                textBoxReserve.ReadOnly =false;
             }
             else
             {
                 try
                 {
                     int IndexEdit;
-                    int.TryParse(textBox2.Text, out IndexEdit);
+                    int.TryParse(textBoxReserve.Text, out IndexEdit);
                     IndexEdit--;
-                    double.TryParse(textBox3.Text, out h1p[IndexEdit]);
-                    double.TryParse(textBox4.Text, out h2p[IndexEdit]);
-                    double.TryParse(textBox5.Text, out L1p[IndexEdit]);
-                    double.TryParse(textBox9.Text, out L2p[IndexEdit]);
-                    double.TryParse(textBox8.Text, out Lp[IndexEdit]);
-                    double.TryParse(textBox7.Text, out m[IndexEdit]);
-                    double.TryParse(textBox6.Text, out n[IndexEdit]);
-                    double.TryParse(textBox10.Text, out hpc[IndexEdit]);
+                    double.TryParse(textBoxH1p.Text, out h1p[IndexEdit]);
+                    double.TryParse(textBoxH2p.Text, out h2p[IndexEdit]);
+                    double.TryParse(textBoxL1p.Text, out L1p[IndexEdit]);
+                    double.TryParse(textBoxL2p.Text, out L2p[IndexEdit]);
+                    double.TryParse(textBoxLp.Text, out Lp[IndexEdit]);
+                    double.TryParse(textBoxM.Text, out m[IndexEdit]);
+                    double.TryParse(textBoxN1.Text, out n[IndexEdit]);
+                    double.TryParse(textBoxHpc.Text, out hpc[IndexEdit]);
                     MessageBox.Show("Резерв отредактирован");
                 }
                 catch (System.IndexOutOfRangeException)
                 {
                     MessageBox.Show("Введённого резерва не существует");
                 }
-              
-                
             }
         }
 
@@ -123,18 +119,18 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEnter_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
-               string.IsNullOrWhiteSpace(textBox2.Text) ||
-               string.IsNullOrWhiteSpace(textBox3.Text) ||
-               string.IsNullOrWhiteSpace(textBox4.Text) ||
-               string.IsNullOrWhiteSpace(textBox5.Text) ||
-               string.IsNullOrWhiteSpace(textBox6.Text) ||
-               string.IsNullOrWhiteSpace(textBox7.Text) ||
-               string.IsNullOrWhiteSpace(textBox8.Text) ||
-               string.IsNullOrWhiteSpace(textBox9.Text) ||
-               string.IsNullOrWhiteSpace(textBox10.Text))
+            if (string.IsNullOrWhiteSpace(textBoxN.Text) ||
+               string.IsNullOrWhiteSpace(textBoxReserve.Text) ||
+               string.IsNullOrWhiteSpace(textBoxH1p.Text) ||
+               string.IsNullOrWhiteSpace(textBoxH2p.Text) ||
+               string.IsNullOrWhiteSpace(textBoxL1p.Text) ||
+               string.IsNullOrWhiteSpace(textBoxN1.Text) ||
+               string.IsNullOrWhiteSpace(textBoxM.Text) ||
+               string.IsNullOrWhiteSpace(textBoxLp.Text) ||
+               string.IsNullOrWhiteSpace(textBoxL2p.Text) ||
+               string.IsNullOrWhiteSpace(textBoxHpc.Text))
             {
                 MessageBox.Show("Заполните поля", "Информация");
             }
@@ -142,9 +138,9 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
             {
                 try
                 {
-                    textBox1.ReadOnly = true;
-                    textBox2.ReadOnly = true;
-                    int.TryParse(textBox1.Text, out GlobalVars.N);
+                    textBoxN.ReadOnly = true;
+                    textBoxReserve.ReadOnly = true;
+                    int.TryParse(textBoxN.Text, out GlobalVars.N);
 
                     if (h1p == null || h2p == null || L1p == null || L2p == null || Lp == null || m == null || n == null || hpc == null)
                     {
@@ -159,47 +155,44 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                     }
                     if (GlobalVars.Index == (GlobalVars.N - 1))
                     {
-                        double.TryParse(textBox3.Text, out h1p[GlobalVars.Index]);
-                        double.TryParse(textBox4.Text, out h2p[GlobalVars.Index]);
-                        double.TryParse(textBox5.Text, out L1p[GlobalVars.Index]);
-                        double.TryParse(textBox9.Text, out L2p[GlobalVars.Index]);
-                        double.TryParse(textBox8.Text, out Lp[GlobalVars.Index]);
-                        double.TryParse(textBox7.Text, out m[GlobalVars.Index]);
-                        double.TryParse(textBox6.Text, out n[GlobalVars.Index]);
-                        double.TryParse(textBox10.Text, out hpc[GlobalVars.Index]);
-                        textBox3.Text = "";
-                        textBox4.Text = "";
-                        textBox5.Text = "";
-                        textBox9.Text = "";
-                        textBox8.Text = "";
-                        textBox7.Text = "";
-                        textBox6.Text = "";
-                        textBox10.Text = "";
+                        double.TryParse(textBoxH1p.Text, out h1p[GlobalVars.Index]);
+                        double.TryParse(textBoxH2p.Text, out h2p[GlobalVars.Index]);
+                        double.TryParse(textBoxL1p.Text, out L1p[GlobalVars.Index]);
+                        double.TryParse(textBoxL2p.Text, out L2p[GlobalVars.Index]);
+                        double.TryParse(textBoxLp.Text, out Lp[GlobalVars.Index]);
+                        double.TryParse(textBoxM.Text, out m[GlobalVars.Index]);
+                        double.TryParse(textBoxN1.Text, out n[GlobalVars.Index]);
+                        double.TryParse(textBoxHpc.Text, out hpc[GlobalVars.Index]);
+                        textBoxH1p.Text = "";
+                        textBoxH2p.Text = "";
+                        textBoxL1p.Text = "";
+                        textBoxL2p.Text = "";
+                        textBoxLp.Text = "";
+                        textBoxM.Text = "";
+                        textBoxN1.Text = "";
+                        textBoxHpc.Text = "";
                         throw new IndexOutOfRangeException();
                     }
-                    double.TryParse(textBox3.Text, out h1p[GlobalVars.Index]);
-                    double.TryParse(textBox4.Text, out h2p[GlobalVars.Index]);
-                    double.TryParse(textBox5.Text, out L1p[GlobalVars.Index]);
-                    double.TryParse(textBox9.Text, out L2p[GlobalVars.Index]);
-                    double.TryParse(textBox8.Text, out Lp[GlobalVars.Index]);
-                    double.TryParse(textBox7.Text, out m[GlobalVars.Index]);
-                    double.TryParse(textBox6.Text, out n[GlobalVars.Index]);
-                    double.TryParse(textBox10.Text, out hpc[GlobalVars.Index]);
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                    textBox5.Text = "";
-                    textBox9.Text = "";
-                    textBox8.Text = "";
-                    textBox7.Text = "";
-                    textBox6.Text = "";
-                    textBox10.Text = "";
-                    
+                    double.TryParse(textBoxH1p.Text, out h1p[GlobalVars.Index]);
+                    double.TryParse(textBoxH2p.Text, out h2p[GlobalVars.Index]);
+                    double.TryParse(textBoxL1p.Text, out L1p[GlobalVars.Index]);
+                    double.TryParse(textBoxL2p.Text, out L2p[GlobalVars.Index]);
+                    double.TryParse(textBoxLp.Text, out Lp[GlobalVars.Index]);
+                    double.TryParse(textBoxM.Text, out m[GlobalVars.Index]);
+                    double.TryParse(textBoxN1.Text, out n[GlobalVars.Index]);
+                    double.TryParse(textBoxHpc.Text, out hpc[GlobalVars.Index]);
+                    textBoxH1p.Text = "";
+                    textBoxH2p.Text = "";
+                    textBoxL1p.Text = "";
+                    textBoxL2p.Text = "";
+                    textBoxLp.Text = "";
+                    textBoxM.Text = "";
+                    textBoxN1.Text = "";
+                    textBoxHpc.Text = "";
                     GlobalVars.Index++;
-                    textBox2.Text = (GlobalVars.Index + 1).ToString();
-
-
+                    textBoxReserve.Text = (GlobalVars.Index + 1).ToString();
                 }
-                catch (System.IndexOutOfRangeException ex)
+                catch (System.IndexOutOfRangeException)
                 {
                     MessageBox.Show("Введены все резервы");
                     ReserveArea();

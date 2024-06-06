@@ -155,7 +155,7 @@
             this.btCount.TabIndex = 42;
             this.btCount.Text = "Посчитать";
             this.btCount.UseVisualStyleBackColor = false;
-            this.btCount.Click += new System.EventHandler(this.button2_Click);
+            this.btCount.Click += new System.EventHandler(this.buttonCount_Click);
             // 
             // menuStrip1
             // 
@@ -175,7 +175,7 @@
             this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
             this.назадToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.назадToolStripMenuItem.Text = "Назад";
-            this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
+            this.назадToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // label25
             // 

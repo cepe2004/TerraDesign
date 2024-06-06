@@ -25,12 +25,12 @@ namespace TerraDesign.Forms.Waterfacil
             GlobalVars.bk = Math.Round(GlobalVars.bk, 2);
             GlobalVars.hk = Math.Round(GlobalVars.hk, 2);
            
-            textBox1.Text = Convert.ToString(GlobalVars.bk);
-            textBox2.Text = Convert.ToString(GlobalVars.hk);
+            textBoxB.Text = Convert.ToString(GlobalVars.bk);
+            textBoxHk.Text = Convert.ToString(GlobalVars.hk);
            
         }
         
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEnter_Click(object sender, EventArgs e)
         {
             foreach (Form wFcheck in System.Windows.Forms.Application.OpenForms) wFcheck.Hide();
             Tema tema = new Tema();
@@ -55,8 +55,8 @@ namespace TerraDesign.Forms.Waterfacil
                 // Добавление текста в документ
                 Paragraph para = doc.Paragraphs.Add();
                 Microsoft.Office.Interop.Word.Range rng = para.Range;
-                rng.Text = label1.Text+"   "+label2.Text+"  "+textBox1.Text+"\n"+
-                    label4.Text + "   " + label3.Text + "  " + textBox2.Text + "\n";
+                rng.Text = labelWidth.Text+"   "+labelB.Text+"  "+textBoxB.Text+"\n"+
+                    labelDepth.Text + "   " + labelH.Text + "  " + textBoxHk.Text + "\n";
 
                 saveFileDialog1.Filter = "doc files (*.doc)|*.doc|All files (*.*)|*.*";
                 saveFileDialog1.FilterIndex = 1;
@@ -94,12 +94,12 @@ namespace TerraDesign.Forms.Waterfacil
                 Microsoft.Office.Interop.Excel.Worksheet excelWorksheet = excelWorkbook.Sheets[1];
 
                 // Записываем данные в ячейки
-                excelWorksheet.Cells[1, 1] = label1.Text;
-                excelWorksheet.Cells[1, 2] = label2.Text;
-                excelWorksheet.Cells[1, 3] = textBox1.Text;
-                excelWorksheet.Cells[2, 1] = label4.Text;
-                excelWorksheet.Cells[2, 2] = label3.Text;
-                excelWorksheet.Cells[2, 3] = textBox2.Text;
+                excelWorksheet.Cells[1, 1] = labelWidth.Text;
+                excelWorksheet.Cells[1, 2] = labelB.Text;
+                excelWorksheet.Cells[1, 3] = textBoxB.Text;
+                excelWorksheet.Cells[2, 1] = labelDepth.Text;
+                excelWorksheet.Cells[2, 2] = labelH.Text;
+                excelWorksheet.Cells[2, 3] = textBoxHk.Text;
                 excelWorksheet.Columns.AutoFit();
 
                 saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";

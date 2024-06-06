@@ -114,7 +114,6 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                     table.Cell(1, col + 1).Range.Text = dataGridView1.Columns[col].HeaderText;
                     table.Cell(1, col + 1).Borders.Enable = 1;// 1 - для включения границ ячейки
                 }
-
                 // Добавляем данные
                 for (int i = 0; i < dataGridView1.RowCount; i++)
                 {

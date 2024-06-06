@@ -31,14 +31,14 @@ namespace TerraDesign.Тестирование
             switch (tema)
             {
                 case "LS":
-                    adp = new NpgsqlDataAdapter("SELECT U.\"FIO\",L.\"dateTime\" , L.\"L2\", L.\"L1\", L.\"h1\", L.\"h2\",L.\"1m\",L.\"1n\",L.\"bprc\"\r\nFROM  \"LateralReserve\" L\r\nJOIN\"Users\" U on id=\"user\"", GlobalVars.conn);
+                    adp = new NpgsqlDataAdapter("SELECT U.\"FIO\"as ФИО,L.\"dateTime\"as \"Ответ дан\" , L.\"L2\", L.\"L1\", L.\"h1\", L.\"h2\",L.\"1m\",L.\"1n\",L.\"bprc\"\r\nFROM  \"LateralReserve\" L\r\nJOIN\"Users\" U on id=\"user\"", GlobalVars.conn);
                     dt = new DataTable();
                     adp.Fill(dt);
                     dataGridView1.DataSource = dt;
                     dataGridView1.AutoResizeColumns();
                break;
                 case "WF":
-                    adp = new NpgsqlDataAdapter("SELECT U.\"FIO\",W.\"dateTime\" , W.\"w\", W.\"x\", W.\"b\", W.\"h\",W.\"m\"\r\nFROM  \"WaterFacilities\" W\r\nJOIN\"Users\" U on id=\"user\"", GlobalVars.conn);
+                    adp = new NpgsqlDataAdapter("SELECT U.\"FIO\"as ФИО,W.\"dateTime\"as \"Ответ дан\" , W.\"w\", W.\"x\", W.\"b\", W.\"h\",W.\"m\"\r\nFROM  \"WaterFacilities\" W\r\nJOIN\"Users\" U on id=\"user\"", GlobalVars.conn);
                     dt = new DataTable();
                     adp.Fill(dt);
                     dataGridView1.DataSource = dt;
@@ -61,7 +61,7 @@ namespace TerraDesign.Тестирование
                 switch (tema)
                 {
                     case "LS":
-                        adp = new NpgsqlDataAdapter("SELECT U.\"FIO\",L.\"dateTime\" , L.\"L2\", L.\"L1\", L.\"h1\", L.\"h2\",L.\"1m\",L.\"1n\",L.\"bprc\"\r\nFROM  \"LateralReserve\" L\r\nJOIN\"Users\" U on id=\"user\"WHERE DATE(\"dateTime\") = '" + textBoxDate.Text + "'", GlobalVars.conn);
+                        adp = new NpgsqlDataAdapter("SELECT U.\"FIO\"as ФИО,L.\"dateTime\"as \"Ответ дан\" , L.\"L2\", L.\"L1\", L.\"h1\", L.\"h2\",L.\"1m\",L.\"1n\",L.\"bprc\"\r\nFROM  \"LateralReserve\" L\r\nJOIN\"Users\" U on id=\"user\"WHERE DATE(\"dateTime\") = '" + textBoxDate.Text + "'", GlobalVars.conn);
                         dt = new DataTable();
                         adp.Fill(dt);
                         dataGridView1.DataSource = dt;

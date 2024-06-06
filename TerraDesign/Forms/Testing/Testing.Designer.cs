@@ -265,6 +265,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Testing";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Расчёт итоговых объёмов земляных работ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Testing_FormClosed);
             this.menuStrip1.ResumeLayout(false);

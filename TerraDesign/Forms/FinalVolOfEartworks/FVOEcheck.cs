@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -33,11 +34,11 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                 var result = MessageBox.Show("Вы хотите использовать данные расчёта боковых резервов", "Информация", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    textBox1.Text = Convert.ToString(GlobalVars.hc);
-                    textBox2.Text = Convert.ToString(GlobalVars.Bzp);
-                    textBox3.Text = Convert.ToString(GlobalVars.hdorod);
-                    textBox4.Text = Convert.ToString(GlobalVars.bprc);
-                    textBox5.Text = Convert.ToString(GlobalVars.bukrp);
+                    textBoxHc.Text = Convert.ToString(GlobalVars.hc);
+                    textBoxBzp.Text = Convert.ToString(GlobalVars.Bzp);
+                    textBoxHdorod.Text = Convert.ToString(GlobalVars.hdorod);
+                    textBoxBprc.Text = Convert.ToString(GlobalVars.bprc);
+                    textBoxBukrp.Text = Convert.ToString(GlobalVars.bukrp);
 
                 }
             }
@@ -46,14 +47,14 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                 var result = MessageBox.Show("Вы хотите использовать данные расчёта водоотводных сооружений", "Информация", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    textBox7.Text = Convert.ToString(GlobalVars.bk);
-                    textBox6.Text = Convert.ToString(GlobalVars.hk);
+                    textBoxBk.Text = Convert.ToString(GlobalVars.bk);
+                    textBoxHk.Text = Convert.ToString(GlobalVars.hk);
                 }
             }
 
 
         }
-        int i = 0,p;
+        int i = 0;
         double[] WorkMark, Plot;
         bool[] Mound;
 
@@ -190,47 +191,47 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
         {
             int Useless;
             double useless1;
-            bool success = int.TryParse(textBox9.Text, out Useless);
-            bool success1 = double.TryParse(textBox10.Text, out useless1);
+            bool success = int.TryParse(textBoxN1.Text, out Useless);
+            bool success1 = double.TryParse(textBoxH.Text, out useless1);
             if (success && success1)
             {
                 try
                 {
-                    int.TryParse(textBox9.Text, out GlobalVars.N);
-                    textBox9.ReadOnly = true;
+                    int.TryParse(textBoxN1.Text, out GlobalVars.N);
+                    textBoxN1.ReadOnly = true;
                     
                     if (WorkMark == null)
                     { WorkMark = new double[GlobalVars.N]; }
                     if (i == (GlobalVars.N - 1))
                     {
-                        double.TryParse(textBox10.Text, out WorkMark[i]);
+                        double.TryParse(textBoxH.Text, out WorkMark[i]);
                        
                         throw new IndexOutOfRangeException();
                     }
-                    double.TryParse(textBox10.Text, out WorkMark[i]);
+                    double.TryParse(textBoxH.Text, out WorkMark[i]);
                     
                     i++;
-                    label38.Text = (i + 1).ToString();
-                    textBox10.Text = "";
+                    labelWorkmark.Text = (i + 1).ToString();
+                    textBoxH.Text = "";
 
 
                 }
                 catch (System.IndexOutOfRangeException ex)
                 {
-                    textBox10.Text = "";
+                    textBoxH.Text = "";
                     Plot = new double[WorkMark.Length];
                   
                     for (i = 0; i < WorkMark.Length; i++)
                     {
                         if (WorkMark[i]==0)
                         {
-                            textBox8.ReadOnly = false;
-                            label14.Text = (i).ToString();
+                            textBoxDist.ReadOnly = false;
+                            labelDist.Text = (i).ToString();
                             break;
                         }
                     }
                         MessageBox.Show("Введены все отметки");
-                    textBox10.ReadOnly = true;
+                    textBoxH.ReadOnly = true;
                     buttonEnterMark.Enabled = false;
                 }
             }
@@ -243,46 +244,45 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
         private void buttonCount_Click(object sender, EventArgs e)
         
         {
-            if (radioButton1.Checked == false && radioButton2.Checked == false)
+            if (radioButtonEmbankment.Checked == false && radioButtonRecess.Checked == false)
             {
                 MessageBox.Show("Выберите признак 1-ой рабочей отметки", "Информация");
             }
             else
             {
-                if (string.IsNullOrWhiteSpace(textBox1.Text) ||
-                   string.IsNullOrWhiteSpace(textBox2.Text) ||
-                   string.IsNullOrWhiteSpace(textBox3.Text) ||
-                   string.IsNullOrWhiteSpace(textBox4.Text) ||
-                   string.IsNullOrWhiteSpace(textBox5.Text) ||
-                   string.IsNullOrWhiteSpace(textBox6.Text) ||
-                   string.IsNullOrWhiteSpace(textBox7.Text) ||
-                   string.IsNullOrWhiteSpace(textBox13.Text) ||
-                   string.IsNullOrWhiteSpace(textBox9.Text) ||
-                 
-                   string.IsNullOrWhiteSpace(textBox12.Text) ||
-                   string.IsNullOrWhiteSpace(textBox11.Text))
+                if (string.IsNullOrWhiteSpace(textBoxHc.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxBzp.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxHdorod.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxBprc.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxBukrp.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxHk.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxBk.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxL.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxN1.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxM.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxN.Text))
                 {
                     MessageBox.Show("Заполните поля", "Информация");
                 }
                 else
                 {
 
-                    double.TryParse(textBox1.Text, out GlobalVars.hc);
-                    double.TryParse(textBox2.Text, out GlobalVars.Bzp);
-                    double.TryParse(textBox3.Text, out GlobalVars.hdorod);
-                    double.TryParse(textBox4.Text, out GlobalVars.bprc);
-                    double.TryParse(textBox5.Text, out GlobalVars.bukrp);
-                    double.TryParse(textBox7.Text, out GlobalVars.bk);
-                    double.TryParse(textBox6.Text, out GlobalVars.hk);
-                    double.TryParse(textBox13.Text, out GlobalVars.L);
-                    double.TryParse(textBox12.Text, out GlobalVars.m);
-                    double.TryParse(textBox11.Text, out GlobalVars.n);
+                    double.TryParse(textBoxHc.Text, out GlobalVars.hc);
+                    double.TryParse(textBoxBzp.Text, out GlobalVars.Bzp);
+                    double.TryParse(textBoxHdorod.Text, out GlobalVars.hdorod);
+                    double.TryParse(textBoxBprc.Text, out GlobalVars.bprc);
+                    double.TryParse(textBoxBukrp.Text, out GlobalVars.bukrp);
+                    double.TryParse(textBoxBk.Text, out GlobalVars.bk);
+                    double.TryParse(textBoxHk.Text, out GlobalVars.hk);
+                    double.TryParse(textBoxL.Text, out GlobalVars.L);
+                    double.TryParse(textBoxM.Text, out GlobalVars.m);
+                    double.TryParse(textBoxN.Text, out GlobalVars.n);
                     Mound = new bool[WorkMark.Length];
                     try
                     {
                         for (i = 0; i < WorkMark.Length; i++)
                         {
-                            if (radioButton1.Checked == true)
+                            if (radioButtonEmbankment.Checked == true)
                             {
                                 if (WorkMark[i] == 0)
                                 {
@@ -299,7 +299,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                                     Mound[i] = true;
                                 }
                             }
-                            else if (radioButton2.Checked == true)
+                            else if (radioButtonRecess.Checked == true)
                             {
                                 if (WorkMark[i] == 0)
                                 {
@@ -324,17 +324,12 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
 
                         
                     }
-                    
-                        
-                        
-                    
                     i = 0;
                     VolumeEarth();
                     CorrectionWorkMark();
                     CorrecionRoadway();
                     VegetableSoilCorrecion();
                     CuvetteDepthCorrection();
-
                     for (int i = 0; i < WorkMark.Length - 1; i++)
                     {
                         if (Mound[i] == true)
@@ -378,13 +373,12 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             { MessageBox.Show("Введите рабочие метки", "Информация");
                 return;
             }
-            double.TryParse(textBox13.Text, out GlobalVars.L);
-             int.TryParse(label14.Text, out i);
+            double.TryParse(textBoxL.Text, out GlobalVars.L);
+             int.TryParse(labelDist.Text, out i);
             
-            bool success = double.TryParse(textBox8.Text, out Plot[i]);
+            bool success = double.TryParse(textBoxDist.Text, out Plot[i]);
             if (success==true)
             {
-             
                         try
                         {
                             Plot[i + 1] = GlobalVars.L - Plot[i];
@@ -399,16 +393,16 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
                         {
                             if (WorkMark[i] == 0)
                             {
-                                textBox8.ReadOnly = false;
-                                label14.Text = (i).ToString();
+                                textBoxDist.ReadOnly = false;
+                                labelDist.Text = (i).ToString();
                                 break;
                             }
                         }
                         if (i == WorkMark.Length)
                         {
-                            textBox8.ReadOnly = true;
+                            textBoxDist.ReadOnly = true;
                         }
-                        textBox8.Text = "";
+                        textBoxDist.Text = "";
             }
             else
             {
@@ -420,17 +414,17 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool success, success1, success2, success3, success4;
-            success = double.TryParse(textBox1.Text, out GlobalVars.hc);
-            success1 = double.TryParse(textBox2.Text, out GlobalVars.Bzp);
-            success2 = double.TryParse(textBox3.Text, out GlobalVars.hdorod);
-            success3 = double.TryParse(textBox4.Text, out GlobalVars.bprc);
-            success4 = double.TryParse(textBox5.Text, out GlobalVars.bukrp);
+            success = double.TryParse(textBoxHc.Text, out GlobalVars.hc);
+            success1 = double.TryParse(textBoxBzp.Text, out GlobalVars.Bzp);
+            success2 = double.TryParse(textBoxHdorod.Text, out GlobalVars.hdorod);
+            success3 = double.TryParse(textBoxBprc.Text, out GlobalVars.bprc);
+            success4 = double.TryParse(textBoxBukrp.Text, out GlobalVars.bukrp);
             if (success == false || success1 == false || success2 == false || success3 == false || success4 == false)
             {
                 DialogResult = MessageBox.Show(this, "Заполнены не все поля.\nВы уверены что хотите сохранить данные", " Внимание", MessageBoxButtons.YesNo);
                 if (DialogResult == DialogResult.Yes)
                 {
-                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp + "'::double precision, hdorod = '" + GlobalVars.hdorod + "'::double precision, bprc = '" + GlobalVars.bprc + "'::double precision, bukrp = '" + GlobalVars.bukrp + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, hdorod = '" + GlobalVars.hdorod.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, bprc = '" + GlobalVars.bprc.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, bukrp = '" + GlobalVars.bukrp.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     MessageBox.Show("Сохранение успешно");
@@ -441,7 +435,7 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             {
                 try
                 {
-                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp + "'::double precision, hdorod = '" + GlobalVars.hdorod + "'::double precision, bprc = '" + GlobalVars.bprc + "'::double precision, bukrp = '" + GlobalVars.bukrp + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
+                    NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" UPDATE public.\"Users\" SET hc = '" + GlobalVars.hc.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, \"Bzp\" = '" + GlobalVars.Bzp.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, hdorod = '" + GlobalVars.hdorod.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, bprc = '" + GlobalVars.bprc.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision, bukrp = '" + GlobalVars.bukrp.ToString(CultureInfo.InvariantCulture).Replace(",", ".") + "'::double precision WHERE id = '" + GlobalVars.IdUser + "'; ", GlobalVars.conn);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     MessageBox.Show("Сохранение успешно");
@@ -459,11 +453,11 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             NpgsqlDataAdapter adp = new NpgsqlDataAdapter(" SELECT hc, \"Bzp\",hdorod,bprc,bukrp FROM \"Users\" WHERE id = '" + GlobalVars.IdUser + "' ", GlobalVars.conn);
             DataTable dt = new DataTable();
             adp.Fill(dt);
-            textBox1.Text = dt.Rows[0][0].ToString();
-            textBox2.Text = dt.Rows[0][1].ToString();
-            textBox3.Text = dt.Rows[0][2].ToString();
-            textBox4.Text = dt.Rows[0][3].ToString();
-            textBox5.Text = dt.Rows[0][4].ToString();
+            textBoxHc.Text = dt.Rows[0][0].ToString();
+            textBoxBzp.Text = dt.Rows[0][1].ToString();
+            textBoxHdorod.Text = dt.Rows[0][2].ToString();
+            textBoxBprc.Text = dt.Rows[0][3].ToString();
+            textBoxBukrp.Text = dt.Rows[0][4].ToString();
         }
 
         private void FVOEcheck_Load(object sender, EventArgs e)
@@ -476,10 +470,10 @@ namespace TerraDesign.Forms.FinalVolOfEartworks
             WorkMark = null;
             GlobalVars.N = 0;
             i = 0;
-            textBox9.ReadOnly = false;
-            textBox10.ReadOnly = false;
+            textBoxN1.ReadOnly = false;
+            textBoxH.ReadOnly = false;
             buttonEnterMark.Enabled = true;
-            label38.Text = 1.ToString();
+            labelWorkmark.Text = 1.ToString();
         }
     }
 }

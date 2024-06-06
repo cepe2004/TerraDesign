@@ -29,56 +29,56 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SPWRcheck));
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxL1p = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxH2p = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxH1p = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxReserve = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxN1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxM = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxLp = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxL2p = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxHpc = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEnter = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label38 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox5
+            // textBoxL1p
             // 
-            this.textBox5.Location = new System.Drawing.Point(532, 294);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 29);
-            this.textBox5.TabIndex = 29;
+            this.textBoxL1p.Location = new System.Drawing.Point(532, 294);
+            this.textBoxL1p.Name = "textBoxL1p";
+            this.textBoxL1p.Size = new System.Drawing.Size(151, 29);
+            this.textBoxL1p.TabIndex = 29;
             // 
             // label9
             // 
@@ -98,12 +98,12 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Ширина резерва по низу";
             // 
-            // textBox4
+            // textBoxH2p
             // 
-            this.textBox4.Location = new System.Drawing.Point(532, 232);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 29);
-            this.textBox4.TabIndex = 26;
+            this.textBoxH2p.Location = new System.Drawing.Point(532, 232);
+            this.textBoxH2p.Name = "textBoxH2p";
+            this.textBoxH2p.Size = new System.Drawing.Size(151, 29);
+            this.textBoxH2p.TabIndex = 26;
             // 
             // label7
             // 
@@ -123,12 +123,12 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Глубина резерва у подошвы внешнего откоса";
             // 
-            // textBox3
+            // textBoxH1p
             // 
-            this.textBox3.Location = new System.Drawing.Point(532, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 29);
-            this.textBox3.TabIndex = 23;
+            this.textBoxH1p.Location = new System.Drawing.Point(532, 170);
+            this.textBoxH1p.Name = "textBoxH1p";
+            this.textBoxH1p.Size = new System.Drawing.Size(151, 29);
+            this.textBoxH1p.TabIndex = 23;
             // 
             // label5
             // 
@@ -148,13 +148,13 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Глубина резерва у подошвы внутреннего откоса";
             // 
-            // textBox2
+            // textBoxReserve
             // 
-            this.textBox2.Location = new System.Drawing.Point(532, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 29);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.Text = "1";
+            this.textBoxReserve.Location = new System.Drawing.Point(532, 108);
+            this.textBoxReserve.Name = "textBoxReserve";
+            this.textBoxReserve.Size = new System.Drawing.Size(151, 29);
+            this.textBoxReserve.TabIndex = 20;
+            this.textBoxReserve.Text = "1";
             // 
             // label4
             // 
@@ -165,12 +165,12 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Данные для резерва с номером";
             // 
-            // textBox1
+            // textBoxN
             // 
-            this.textBox1.Location = new System.Drawing.Point(532, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 29);
-            this.textBox1.TabIndex = 17;
+            this.textBoxN.Location = new System.Drawing.Point(532, 46);
+            this.textBoxN.Name = "textBoxN";
+            this.textBoxN.Size = new System.Drawing.Size(151, 29);
+            this.textBoxN.TabIndex = 17;
             // 
             // label2
             // 
@@ -190,12 +190,12 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Количество резервов";
             // 
-            // textBox6
+            // textBoxN1
             // 
-            this.textBox6.Location = new System.Drawing.Point(1077, 234);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 29);
-            this.textBox6.TabIndex = 54;
+            this.textBoxN1.Location = new System.Drawing.Point(1077, 234);
+            this.textBoxN1.Name = "textBoxN1";
+            this.textBoxN1.Size = new System.Drawing.Size(151, 29);
+            this.textBoxN1.TabIndex = 54;
             // 
             // label3
             // 
@@ -215,12 +215,12 @@
             this.label11.TabIndex = 52;
             this.label11.Text = "Крутизна внешнего откоса";
             // 
-            // textBox7
+            // textBoxM
             // 
-            this.textBox7.Location = new System.Drawing.Point(1077, 172);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(151, 29);
-            this.textBox7.TabIndex = 51;
+            this.textBoxM.Location = new System.Drawing.Point(1077, 172);
+            this.textBoxM.Name = "textBoxM";
+            this.textBoxM.Size = new System.Drawing.Size(151, 29);
+            this.textBoxM.TabIndex = 51;
             // 
             // label12
             // 
@@ -240,12 +240,12 @@
             this.label13.TabIndex = 49;
             this.label13.Text = "Крутизна внутреннего откоса";
             // 
-            // textBox8
+            // textBoxLp
             // 
-            this.textBox8.Location = new System.Drawing.Point(1077, 110);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(151, 29);
-            this.textBox8.TabIndex = 48;
+            this.textBoxLp.Location = new System.Drawing.Point(1077, 110);
+            this.textBoxLp.Name = "textBoxLp";
+            this.textBoxLp.Size = new System.Drawing.Size(151, 29);
+            this.textBoxLp.TabIndex = 48;
             // 
             // label14
             // 
@@ -265,12 +265,12 @@
             this.label15.TabIndex = 46;
             this.label15.Text = "Длина резерва (метры)";
             // 
-            // textBox9
+            // textBoxL2p
             // 
-            this.textBox9.Location = new System.Drawing.Point(1077, 48);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(151, 29);
-            this.textBox9.TabIndex = 45;
+            this.textBoxL2p.Location = new System.Drawing.Point(1077, 48);
+            this.textBoxL2p.Name = "textBoxL2p";
+            this.textBoxL2p.Size = new System.Drawing.Size(151, 29);
+            this.textBoxL2p.TabIndex = 45;
             // 
             // label16
             // 
@@ -290,12 +290,12 @@
             this.label17.TabIndex = 55;
             this.label17.Text = "L";
             // 
-            // textBox10
+            // textBoxHpc
             // 
-            this.textBox10.Location = new System.Drawing.Point(1077, 293);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(151, 29);
-            this.textBox10.TabIndex = 58;
+            this.textBoxHpc.Location = new System.Drawing.Point(1077, 293);
+            this.textBoxHpc.Name = "textBoxHpc";
+            this.textBoxHpc.Size = new System.Drawing.Size(151, 29);
+            this.textBoxHpc.TabIndex = 58;
             // 
             // label18
             // 
@@ -315,22 +315,22 @@
             this.label19.TabIndex = 56;
             this.label19.Text = "Толщина растительного слоя";
             // 
-            // button1
+            // buttonEnter
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(702, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 58);
-            this.button1.TabIndex = 59;
-            this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEnter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonEnter.Location = new System.Drawing.Point(702, 366);
+            this.buttonEnter.Name = "buttonEnter";
+            this.buttonEnter.Size = new System.Drawing.Size(208, 58);
+            this.buttonEnter.TabIndex = 59;
+            this.buttonEnter.Text = "Подтвердить";
+            this.buttonEnter.UseVisualStyleBackColor = false;
+            this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.назадToolStripMenuItem});
+            this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
@@ -338,13 +338,13 @@
             this.menuStrip1.TabIndex = 60;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // назадToolStripMenuItem
+            // backToolStripMenuItem
             // 
-            this.назадToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
-            this.назадToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.назадToolStripMenuItem.Text = "Назад";
-            this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // label38
             // 
@@ -406,27 +406,27 @@
             this.label24.TabIndex = 94;
             this.label24.Text = "р.";
             // 
-            // button2
+            // buttonEdit
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(488, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 58);
-            this.button2.TabIndex = 95;
-            this.button2.Text = "Редактировать";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonEdit.Location = new System.Drawing.Point(488, 366);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(208, 58);
+            this.buttonEdit.TabIndex = 95;
+            this.buttonEdit.Text = "Редактировать";
+            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // button3
+            // buttonReset
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.Location = new System.Drawing.Point(274, 366);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 58);
-            this.button3.TabIndex = 96;
-            this.button3.Text = "Сброс";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonReset.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonReset.Location = new System.Drawing.Point(274, 366);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(208, 58);
+            this.buttonReset.TabIndex = 96;
+            this.buttonReset.Text = "Сброс";
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // label25
             // 
@@ -445,8 +445,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1249, 508);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonReset);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -454,34 +454,34 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.buttonEnter);
+            this.Controls.Add(this.textBoxHpc);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxN1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxM);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxLp);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBoxL2p);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxL1p);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxH2p);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxH1p);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxReserve);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -502,46 +502,46 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxL1p;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxH2p;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxH1p;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxReserve;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxN1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxM;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxLp;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxL2p;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxHpc;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Label label25;
     }
 }

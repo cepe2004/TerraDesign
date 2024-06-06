@@ -36,14 +36,10 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                 dataGridView1.Rows[i].Cells[1].Value = GlobalVars.Sp[i];
                 dataGridView1.Rows[i].Cells[2].Value = GlobalVars.Vrgr[i];
                 dataGridView1.Rows[i].Cells[3].Value = GlobalVars.Vvos[i];
-
             }
-
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEnter_Click(object sender, EventArgs e)
         {
             foreach (Form wFcheck in System.Windows.Forms.Application.OpenForms) wFcheck.Hide();
             Tema tema = new Tema();
@@ -83,9 +79,6 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                         table.Cell(i + 2, j + 1).Borders.Enable = 1;// 1 - для включения границ ячейки
                     }
                 }
-
-               
-
                 saveFileDialog1.Filter = "doc files (*.doc)|*.doc|All files (*.*)|*.*";
                 saveFileDialog1.FilterIndex = 1;
                 saveFileDialog1.RestoreDirectory = true;

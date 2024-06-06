@@ -31,50 +31,52 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LScheck));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxHc = new System.Windows.Forms.TextBox();
+            this.textBoxBzp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxHp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxM = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonSelfish = new System.Windows.Forms.RadioButton();
+            this.radioButtonCrescent = new System.Windows.Forms.RadioButton();
+            this.radioButtonDoublesided = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnesided = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.radioButtonSingleslope = new System.Windows.Forms.RadioButton();
+            this.radioButtonDoubleslope = new System.Windows.Forms.RadioButton();
+            this.textBoxHdorod = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxBprc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxBukrp = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxN1 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxH1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.labelWorkmark = new System.Windows.Forms.Label();
+            this.buttonEnterWorkmark = new System.Windows.Forms.Button();
+            this.buttonCount = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -82,8 +84,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,19 +109,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "h";
             // 
-            // textBox1
+            // textBoxHc
             // 
-            this.textBox1.Location = new System.Drawing.Point(465, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 31);
-            this.textBox1.TabIndex = 2;
+            this.textBoxHc.Location = new System.Drawing.Point(465, 43);
+            this.textBoxHc.Name = "textBoxHc";
+            this.textBoxHc.Size = new System.Drawing.Size(151, 31);
+            this.textBoxHc.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxBzp
             // 
-            this.textBox2.Location = new System.Drawing.Point(465, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 31);
-            this.textBox2.TabIndex = 5;
+            this.textBoxBzp.Location = new System.Drawing.Point(465, 105);
+            this.textBoxBzp.Name = "textBoxBzp";
+            this.textBoxBzp.Size = new System.Drawing.Size(151, 31);
+            this.textBoxBzp.TabIndex = 5;
             // 
             // label3
             // 
@@ -141,12 +141,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Ширина земляного полотна по верху";
             // 
-            // textBox3
+            // textBoxHp
             // 
-            this.textBox3.Location = new System.Drawing.Point(465, 167);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 31);
-            this.textBox3.TabIndex = 8;
+            this.textBoxHp.Location = new System.Drawing.Point(465, 167);
+            this.textBoxHp.Name = "textBoxHp";
+            this.textBoxHp.Size = new System.Drawing.Size(151, 31);
+            this.textBoxHp.TabIndex = 8;
             // 
             // label5
             // 
@@ -166,12 +166,12 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Средняя глубина резерва";
             // 
-            // textBox4
+            // textBoxM
             // 
-            this.textBox4.Location = new System.Drawing.Point(465, 229);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 31);
-            this.textBox4.TabIndex = 11;
+            this.textBoxM.Location = new System.Drawing.Point(465, 229);
+            this.textBoxM.Name = "textBoxM";
+            this.textBoxM.Size = new System.Drawing.Size(151, 31);
+            this.textBoxM.TabIndex = 11;
             // 
             // label7
             // 
@@ -191,12 +191,12 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Крутизна внутреннего откоса резерва";
             // 
-            // textBox5
+            // textBoxN
             // 
-            this.textBox5.Location = new System.Drawing.Point(465, 291);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 31);
-            this.textBox5.TabIndex = 14;
+            this.textBoxN.Location = new System.Drawing.Point(465, 291);
+            this.textBoxN.Name = "textBoxN";
+            this.textBoxN.Size = new System.Drawing.Size(151, 31);
+            this.textBoxN.TabIndex = 14;
             // 
             // label9
             // 
@@ -216,54 +216,54 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Крутизна внешнего откоса резерва";
             // 
-            // radioButton1
+            // radioButtonSelfish
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(297, 44);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(129, 29);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "корытный";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonSelfish.AutoSize = true;
+            this.radioButtonSelfish.Location = new System.Drawing.Point(297, 44);
+            this.radioButtonSelfish.Name = "radioButtonSelfish";
+            this.radioButtonSelfish.Size = new System.Drawing.Size(129, 29);
+            this.radioButtonSelfish.TabIndex = 16;
+            this.radioButtonSelfish.TabStop = true;
+            this.radioButtonSelfish.Text = "корытный";
+            this.radioButtonSelfish.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonCrescent
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(444, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(163, 29);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "серповидный";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCrescent.AutoSize = true;
+            this.radioButtonCrescent.Location = new System.Drawing.Point(444, 44);
+            this.radioButtonCrescent.Name = "radioButtonCrescent";
+            this.radioButtonCrescent.Size = new System.Drawing.Size(163, 29);
+            this.radioButtonCrescent.TabIndex = 17;
+            this.radioButtonCrescent.TabStop = true;
+            this.radioButtonCrescent.Text = "серповидный";
+            this.radioButtonCrescent.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonDoublesided
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(218, 43);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(180, 29);
-            this.radioButton3.TabIndex = 20;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "двухсторонний";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonDoublesided.AutoSize = true;
+            this.radioButtonDoublesided.Location = new System.Drawing.Point(218, 43);
+            this.radioButtonDoublesided.Name = "radioButtonDoublesided";
+            this.radioButtonDoublesided.Size = new System.Drawing.Size(180, 29);
+            this.radioButtonDoublesided.TabIndex = 20;
+            this.radioButtonDoublesided.TabStop = true;
+            this.radioButtonDoublesided.Text = "двухсторонний";
+            this.radioButtonDoublesided.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioButtonOnesided
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(424, 43);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(183, 29);
-            this.radioButton4.TabIndex = 21;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "односторонний";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButtonOnesided.AutoSize = true;
+            this.radioButtonOnesided.Location = new System.Drawing.Point(424, 43);
+            this.radioButtonOnesided.Name = "radioButtonOnesided";
+            this.radioButtonOnesided.Size = new System.Drawing.Size(183, 29);
+            this.radioButtonOnesided.TabIndex = 21;
+            this.radioButtonOnesided.TabStop = true;
+            this.radioButtonOnesided.Text = "односторонний";
+            this.radioButtonOnesided.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButtonSelfish);
+            this.groupBox1.Controls.Add(this.radioButtonCrescent);
             this.groupBox1.Location = new System.Drawing.Point(9, 354);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(607, 100);
@@ -273,8 +273,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.radioButtonDoublesided);
+            this.groupBox2.Controls.Add(this.radioButtonOnesided);
             this.groupBox2.Location = new System.Drawing.Point(9, 472);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(607, 102);
@@ -284,8 +284,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Controls.Add(this.radioButtonSingleslope);
+            this.groupBox3.Controls.Add(this.radioButtonDoubleslope);
             this.groupBox3.Location = new System.Drawing.Point(9, 604);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(607, 102);
@@ -293,34 +293,34 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Тип поперечного уклона дна резерва:";
             // 
-            // radioButton5
+            // radioButtonSingleslope
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(255, 47);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(161, 29);
-            this.radioButton5.TabIndex = 20;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "односкатный";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButtonSingleslope.AutoSize = true;
+            this.radioButtonSingleslope.Location = new System.Drawing.Point(255, 47);
+            this.radioButtonSingleslope.Name = "radioButtonSingleslope";
+            this.radioButtonSingleslope.Size = new System.Drawing.Size(161, 29);
+            this.radioButtonSingleslope.TabIndex = 20;
+            this.radioButtonSingleslope.TabStop = true;
+            this.radioButtonSingleslope.Text = "односкатный";
+            this.radioButtonSingleslope.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // radioButtonDoubleslope
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(444, 47);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(158, 29);
-            this.radioButton6.TabIndex = 21;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "двухскатный";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButtonDoubleslope.AutoSize = true;
+            this.radioButtonDoubleslope.Location = new System.Drawing.Point(444, 47);
+            this.radioButtonDoubleslope.Name = "radioButtonDoubleslope";
+            this.radioButtonDoubleslope.Size = new System.Drawing.Size(158, 29);
+            this.radioButtonDoubleslope.TabIndex = 21;
+            this.radioButtonDoubleslope.TabStop = true;
+            this.radioButtonDoubleslope.Text = "двухскатный";
+            this.radioButtonDoubleslope.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // textBoxHdorod
             // 
-            this.textBox6.Location = new System.Drawing.Point(1040, 43);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 31);
-            this.textBox6.TabIndex = 27;
+            this.textBoxHdorod.Location = new System.Drawing.Point(1040, 43);
+            this.textBoxHdorod.Name = "textBoxHdorod";
+            this.textBoxHdorod.Size = new System.Drawing.Size(151, 31);
+            this.textBoxHdorod.TabIndex = 27;
             // 
             // label11
             // 
@@ -340,12 +340,12 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "Толщина  дорожной одежды*";
             // 
-            // textBox7
+            // textBoxBprc
             // 
-            this.textBox7.Location = new System.Drawing.Point(1040, 102);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(151, 31);
-            this.textBox7.TabIndex = 30;
+            this.textBoxBprc.Location = new System.Drawing.Point(1040, 102);
+            this.textBoxBprc.Name = "textBoxBprc";
+            this.textBoxBprc.Size = new System.Drawing.Size(151, 31);
+            this.textBoxBprc.TabIndex = 30;
             // 
             // label13
             // 
@@ -365,12 +365,12 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "Ширина проезжей части*";
             // 
-            // textBox8
+            // textBoxBukrp
             // 
-            this.textBox8.Location = new System.Drawing.Point(1040, 167);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(151, 31);
-            this.textBox8.TabIndex = 33;
+            this.textBoxBukrp.Location = new System.Drawing.Point(1040, 167);
+            this.textBoxBukrp.Name = "textBoxBukrp";
+            this.textBoxBukrp.Size = new System.Drawing.Size(151, 31);
+            this.textBoxBukrp.TabIndex = 33;
             // 
             // label15
             // 
@@ -390,12 +390,12 @@
             this.label16.TabIndex = 31;
             this.label16.Text = "Ширина укрепительной полосы*";
             // 
-            // textBox9
+            // textBoxN1
             // 
-            this.textBox9.Location = new System.Drawing.Point(407, 19);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(151, 31);
-            this.textBox9.TabIndex = 36;
+            this.textBoxN1.Location = new System.Drawing.Point(407, 19);
+            this.textBoxN1.Name = "textBoxN1";
+            this.textBoxN1.Size = new System.Drawing.Size(151, 31);
+            this.textBoxN1.TabIndex = 36;
             // 
             // label17
             // 
@@ -415,12 +415,12 @@
             this.label18.TabIndex = 34;
             this.label18.Text = "Количество рабочих  отметок";
             // 
-            // textBox10
+            // textBoxH1
             // 
-            this.textBox10.Location = new System.Drawing.Point(407, 84);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(151, 31);
-            this.textBox10.TabIndex = 39;
+            this.textBoxH1.Location = new System.Drawing.Point(407, 84);
+            this.textBoxH1.Name = "textBoxH1";
+            this.textBoxH1.Size = new System.Drawing.Size(151, 31);
+            this.textBoxH1.TabIndex = 39;
             // 
             // label19
             // 
@@ -442,13 +442,13 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.buttonReset);
+            this.groupBox4.Controls.Add(this.labelWorkmark);
+            this.groupBox4.Controls.Add(this.buttonEnterWorkmark);
             this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.textBoxH1);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.textBoxN1);
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Location = new System.Drawing.Point(633, 213);
@@ -457,47 +457,47 @@
             this.groupBox4.TabIndex = 40;
             this.groupBox4.TabStop = false;
             // 
-            // button3
+            // buttonReset
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.Location = new System.Drawing.Point(0, 141);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(283, 67);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Сброс";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonReset.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonReset.Location = new System.Drawing.Point(0, 141);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(283, 67);
+            this.buttonReset.TabIndex = 51;
+            this.buttonReset.Text = "Сброс";
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
-            // label24
+            // labelWorkmark
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(348, 96);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 16);
-            this.label24.TabIndex = 50;
-            this.label24.Text = "1";
+            this.labelWorkmark.AutoSize = true;
+            this.labelWorkmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWorkmark.Location = new System.Drawing.Point(348, 96);
+            this.labelWorkmark.Name = "labelWorkmark";
+            this.labelWorkmark.Size = new System.Drawing.Size(14, 16);
+            this.labelWorkmark.TabIndex = 50;
+            this.labelWorkmark.Text = "1";
             // 
-            // button1
+            // buttonEnterWorkmark
             // 
-            this.button1.Location = new System.Drawing.Point(292, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(283, 67);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Подтвердить отметку";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEnterWorkmark.Location = new System.Drawing.Point(292, 141);
+            this.buttonEnterWorkmark.Name = "buttonEnterWorkmark";
+            this.buttonEnterWorkmark.Size = new System.Drawing.Size(283, 67);
+            this.buttonEnterWorkmark.TabIndex = 40;
+            this.buttonEnterWorkmark.Text = "Подтвердить отметку";
+            this.buttonEnterWorkmark.UseVisualStyleBackColor = true;
+            this.buttonEnterWorkmark.Click += new System.EventHandler(this.buttonEnterWorkmark_Click);
             // 
-            // button2
+            // buttonCount
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(803, 544);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(286, 67);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Посчитать";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCount.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonCount.Location = new System.Drawing.Point(803, 544);
+            this.buttonCount.Name = "buttonCount";
+            this.buttonCount.Size = new System.Drawing.Size(286, 67);
+            this.buttonCount.TabIndex = 41;
+            this.buttonCount.Text = "Посчитать";
+            this.buttonCount.UseVisualStyleBackColor = false;
+            this.buttonCount.Click += new System.EventHandler(this.buttonCount_Click);
             // 
             // menuStrip1
             // 
@@ -521,6 +521,20 @@
             this.backToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.saveToolStripMenuItem.Text = "Сохранить";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.loadToolStripMenuItem.Text = "Загрузить";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // label21
             // 
@@ -592,20 +606,6 @@
             this.label28.TabIndex = 98;
             this.label28.Text = "Используйте запятую [,] как разделитель целой и дробной части";
             // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
-            this.saveToolStripMenuItem.Text = "Сохранить";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // loadToolStripMenuItem
-            // 
-            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
-            this.loadToolStripMenuItem.Text = "Загрузить";
-            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
-            // 
             // LScheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -620,33 +620,33 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonCount);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxBukrp);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBoxBprc);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxHdorod);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxN);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxM);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxHp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxBzp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxHc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -677,56 +677,56 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxHc;
+        private System.Windows.Forms.TextBox textBoxBzp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxHp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxM;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxN;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButtonSelfish;
+        private System.Windows.Forms.RadioButton radioButtonCrescent;
+        private System.Windows.Forms.RadioButton radioButtonDoublesided;
+        private System.Windows.Forms.RadioButton radioButtonOnesided;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.RadioButton radioButtonSingleslope;
+        private System.Windows.Forms.RadioButton radioButtonDoubleslope;
+        private System.Windows.Forms.TextBox textBoxHdorod;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxBprc;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxBukrp;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxN1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxH1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonEnterWorkmark;
+        private System.Windows.Forms.Button buttonCount;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label labelWorkmark;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;

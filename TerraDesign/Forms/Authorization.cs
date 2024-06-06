@@ -36,13 +36,9 @@ namespace TerraDesign.Forms
                     int.TryParse(dt.Rows[0][0].ToString(), out GlobalVars.IdUser);
                     GlobalVars.FIOUser = dt.Rows[0][1].ToString();
                     int.TryParse(dt.Rows[0][2].ToString(), out GlobalVars.RoleUser);
-
                     Tema tema = new Tema();
                     tema.Show();
                     this.Hide();
-
-
-
                 }
                 catch (NpgsqlException)
                 {
