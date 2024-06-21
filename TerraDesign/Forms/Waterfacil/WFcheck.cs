@@ -20,7 +20,8 @@ namespace TerraDesign.Forms.Waterfacil
         {
             InitializeComponent();
         }
-        double Q, i, n, m, B=0.4, H=0.3, w, X, R, W, v;
+        public double n;
+        double Q, i, m, B=0.4, H=0.3, w, X, R, W, v;
 
         private void clearArea()
         {
@@ -44,14 +45,14 @@ namespace TerraDesign.Forms.Waterfacil
                 X=2*H*Math.Sqrt(1 + m * m);
         }
         }
-        private double speedCharacteristics(double r)
+        public double speedCharacteristics(double r)
         {
            
             if (n == 0.017)
             {
                 switch (r)
                 {
-
+                    
                     case 0.10: return 12.0; 
                     case 0.12: return 13.6; 
                     case 0.14: return 15.1;
@@ -191,13 +192,14 @@ namespace TerraDesign.Forms.Waterfacil
             return 0;
         }
 
-            private void buttonCount_Click(object sender, EventArgs e)
+        
+
+        private void buttonCount_Click(object sender, EventArgs e)
             {
             bool success = double.TryParse(tbQ.Text, out Q);
             bool success1 = double.TryParse(tbI.Text, out i);
             bool success2 = double.TryParse(cbn.Text, out n);
             bool success3 = double.TryParse(tbm.Text, out m);
-
             if (success==false || success1 == false || success2 == false || success3 == false )
             {
                 MessageBox.Show("Введите числовые значения ", "Информация");

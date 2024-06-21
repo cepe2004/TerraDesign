@@ -14,6 +14,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>E:\TerraDesignInstaller\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,13 +30,11 @@
     <PublisherName>Sergy Grebelny</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -300,6 +300,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -331,11 +332,10 @@
   <ItemGroup>
     <Content Include="AppIcon.ico" />
     <Content Include="Properties\AppIcon.ico" />
-    <Content Include="Properties\Боковой резерв1.jpg" />
-    <Content Include="Properties\Боковой резерв2.jpg" />
-    <Content Include="Properties\Боковой резерв3.jpg" />
-    <Content Include="Properties\Водоотводные сооружения.jpg" />
-    <Content Include="Properties\земляное полотно в выемкеjpg.jpg" />
+    <Content Include="Properties\LateralReserve1.jpg" />
+    <Content Include="Properties\LateralReserve2.jpg" />
+    <Content Include="Properties\LateralReserve3.jpg" />
+    <Content Include="Properties\WaterFacilities.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

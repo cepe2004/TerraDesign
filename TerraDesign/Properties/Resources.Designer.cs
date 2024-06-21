@@ -22,7 +22,7 @@ namespace TerraDesign.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace TerraDesign.Properties {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TerraDesign.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace TerraDesign.Properties {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,9 +63,9 @@ namespace TerraDesign.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Боковой_резерв1 {
+        internal static System.Drawing.Bitmap LateralReserve1 {
             get {
-                object obj = ResourceManager.GetObject("Боковой резерв1", resourceCulture);
+                object obj = ResourceManager.GetObject("LateralReserve1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace TerraDesign.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Боковой_резерв2 {
+        internal static System.Drawing.Bitmap LateralReserve2 {
             get {
-                object obj = ResourceManager.GetObject("Боковой_резерв2", resourceCulture);
+                object obj = ResourceManager.GetObject("LateralReserve2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace TerraDesign.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Боковой_резерв3 {
+        internal static System.Drawing.Bitmap LateralReserve3 {
             get {
-                object obj = ResourceManager.GetObject("Боковой резерв3", resourceCulture);
+                object obj = ResourceManager.GetObject("LateralReserve3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,19 +93,9 @@ namespace TerraDesign.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Водоотводные_сооружения {
+        internal static System.Drawing.Bitmap WaterFacilities {
             get {
-                object obj = ResourceManager.GetObject("Водоотводные_сооружения", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap земляное_полотно_в_выемкеjpg {
-            get {
-                object obj = ResourceManager.GetObject("земляное полотно в выемкеjpg", resourceCulture);
+                object obj = ResourceManager.GetObject("WaterFacilities", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

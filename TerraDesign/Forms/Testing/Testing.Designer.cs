@@ -78,9 +78,9 @@
             this.lbQuestion.AutoSize = true;
             this.lbQuestion.Location = new System.Drawing.Point(12, 42);
             this.lbQuestion.Name = "lbQuestion";
-            this.lbQuestion.Size = new System.Drawing.Size(60, 24);
+            this.lbQuestion.Size = new System.Drawing.Size(126, 24);
             this.lbQuestion.TabIndex = 82;
-            this.lbQuestion.Text = "label1";
+            this.lbQuestion.Text = "labelQuestion";
             // 
             // btAnswer
             // 
@@ -207,7 +207,7 @@
             // 
             // pictureQuest3
             // 
-            this.pictureQuest3.Image = global::TerraDesign.Properties.Resources.Боковой_резерв3;
+            this.pictureQuest3.Image = global::TerraDesign.Properties.Resources.LateralReserve3;
             this.pictureQuest3.Location = new System.Drawing.Point(705, 106);
             this.pictureQuest3.Name = "pictureQuest3";
             this.pictureQuest3.Size = new System.Drawing.Size(357, 225);
@@ -229,7 +229,7 @@
             // 
             // pictureQuest2
             // 
-            this.pictureQuest2.Image = global::TerraDesign.Properties.Resources.Боковой_резерв2;
+            this.pictureQuest2.Image = global::TerraDesign.Properties.Resources.LateralReserve2;
             this.pictureQuest2.Location = new System.Drawing.Point(321, 106);
             this.pictureQuest2.Name = "pictureQuest2";
             this.pictureQuest2.Size = new System.Drawing.Size(378, 225);
@@ -252,6 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1061, 570);
             this.Controls.Add(this.labelFIO);
             this.Controls.Add(this.groupBox1);
@@ -264,9 +265,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
             this.Name = "Testing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Расчёт итоговых объёмов земляных работ";
+            this.Text = "Программа  расчётов водоотводных сооружений и объёмов земляных работ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Testing_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

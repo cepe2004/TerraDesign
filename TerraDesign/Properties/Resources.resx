@@ -118,19 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Боковой резерв1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Боковой резерв1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LateralReserve1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lateralreserve1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="земляное полотно в выемкеjpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>земляное полотно в выемкеjpg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LateralReserve2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lateralreserve2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Боковой резерв3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Боковой резерв3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LateralReserve3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>lateralreserve3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Боковой_резерв2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Боковой резерв2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Водоотводные_сооружения" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Водоотводные сооружения.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WaterFacilities" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>waterfacilities.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

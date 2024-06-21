@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Программа  расчётов", "TerraDesign\Программа  расчётов.csproj", "{FAE06439-AA55-41E1-B067-B1F429C1EA1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraDesignTests", "TerraDesignTests\TerraDesignTests.csproj", "{B75B1FF0-FAFF-4A41-AF8D-2D49B1E46FFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FAE06439-AA55-41E1-B067-B1F429C1EA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE06439-AA55-41E1-B067-B1F429C1EA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE06439-AA55-41E1-B067-B1F429C1EA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75B1FF0-FAFF-4A41-AF8D-2D49B1E46FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75B1FF0-FAFF-4A41-AF8D-2D49B1E46FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75B1FF0-FAFF-4A41-AF8D-2D49B1E46FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75B1FF0-FAFF-4A41-AF8D-2D49B1E46FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -44,9 +44,9 @@ namespace TerraDesign
             {
                 case "LS":
                     lbQuestion.Text = questionLs[0];
-                    pictureQuest1.Image = Resources.Боковой_резерв1;
-                    pictureQuest2.Image = Resources.Боковой_резерв2;
-                    pictureQuest3.Image = Resources.Боковой_резерв3;
+                    pictureQuest1.Image = Resources.LateralReserve1;
+                    pictureQuest2.Image = Resources.LateralReserve2;
+                    pictureQuest3.Image = Resources.LateralReserve3;
                     rbAnswer1.Text = "Вз.п";
                     rbAnswer2.Text = "Впр.ч";
                     rbAnswer3.Text = "h1";
@@ -56,7 +56,7 @@ namespace TerraDesign
                     break;
                 case "WF":
                     lbQuestion.Text = questionWF[0];
-                    pictureQuest2.Image = Resources.Водоотводные_сооружения;
+                    pictureQuest2.Image = Resources.WaterFacilities;
                     pictureQuest1.Visible = false;
                     pictureQuest3.Visible = false;
                     rbAnswer1.Text = "w";

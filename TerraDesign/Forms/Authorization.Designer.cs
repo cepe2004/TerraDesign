@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.buttonEnter = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxHidePassword = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,25 +112,10 @@
             this.buttonEnter.UseVisualStyleBackColor = false;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(459, 32);
-            this.menuStrip1.TabIndex = 82;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // backToolStripMenuItem
             // 
-            this.backToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.backToolStripMenuItem.Text = "Назад";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // checkBoxHidePassword
             // 
@@ -141,6 +128,26 @@
             this.checkBoxHidePassword.UseVisualStyleBackColor = true;
             this.checkBoxHidePassword.CheckedChanged += new System.EventHandler(this.checkBoxHidePassword_CheckedChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.назадToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(459, 32);
+            this.menuStrip1.TabIndex = 84;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // назадToolStripMenuItem
+            // 
+            this.назадToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
+            this.назадToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.назадToolStripMenuItem.Text = "Назад";
+            this.назадToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -148,8 +155,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(459, 401);
-            this.Controls.Add(this.checkBoxHidePassword);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.checkBoxHidePassword);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbLogin);
@@ -158,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Authorization";
@@ -179,8 +187,9 @@
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button buttonEnter;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBoxHidePassword;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
     }
 }
