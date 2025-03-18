@@ -81,6 +81,11 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                     double.TryParse(textBoxN1.Text, out n[IndexEdit]);
                     double.TryParse(textBoxHpc.Text, out hpc[IndexEdit]);
                     MessageBox.Show("Резерв отредактирован");
+                    ReserveArea();
+                    VolRemovedSoil();
+                    VolRemovedSoilToRestore();
+                    SPWRtotal sPWRtotal = new SPWRtotal();
+                    sPWRtotal.Show();
                 }
                 catch (System.IndexOutOfRangeException)
                 {
