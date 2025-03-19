@@ -409,6 +409,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(488, 366);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 58);

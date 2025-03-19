@@ -66,6 +66,7 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
             {
                 MessageBox.Show("Введите номер и данные резерва, а затем нажмите редактировать");
                 textBox2.ReadOnly =false;
+                button1.Enabled= false;
             }
             else
             {
@@ -83,6 +84,11 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                     double.TryParse(textBox6.Text, out n[IndexEdit]);
                     double.TryParse(textBox10.Text, out hpc[IndexEdit]);
                     MessageBox.Show("Резерв отредактирован");
+                    ReserveArea();
+                    VolRemovedSoil();
+                    VolRemovedSoilToRestore();
+                    SPWRtotal sPWRtotal = new SPWRtotal();
+                    sPWRtotal.Show();
                 }
                 catch (System.IndexOutOfRangeException)
                 {
@@ -205,6 +211,7 @@ namespace TerraDesign.Forms.ScopeOfWorksReclamation
                     ReserveArea();
                     VolRemovedSoil();
                     VolRemovedSoilToRestore();
+                    button2.Enabled= true;
                     SPWRtotal sPWRtotal = new SPWRtotal();
                     sPWRtotal.Show();
                 }
